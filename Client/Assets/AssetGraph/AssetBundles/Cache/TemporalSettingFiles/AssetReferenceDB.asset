@@ -1,0 +1,3678 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
+  m_Name: AssetReferenceDB
+  m_EditorClassIdentifier: 
+  m_assets:
+  - m_assetDatabaseId: 3a0df0e00242a1a4ab61d5849ec679ee
+    m_importFrom: Assets/Scripts/Manager/GameManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1ece3b373b25f054f93aea5c0482ed6e
+    m_importFrom: Assets/Scripts/Common/Loader.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 57e5b4f272c13400db25084f10fea6a1
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/readme.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 408083dc9c2f74c62aabd45e865483d4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Exporter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 37555d4cd39377746932ee0827a11c15
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_LightTheme.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7e20a849903d15742a7aa285077c0804
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ad8c280d42ee0ed41a27db23b43dd2bf
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/BuildScriptPackedPlayMode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8583f759fa46fea46a8d2e9a4b3f51fd
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HideResourceFoldersScope.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71f0b2cf522d4463b8785e74ba1d86c4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Addressables/AddressableBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9e24947de15b9834991c9d8411ea37cf
+    m_importFrom: Packages/com.unity.addressables/Runtime/Unity.Addressables.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7e3976da977cb49238499ea3b4c237ae
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/ProfileDataSourceSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cd105ac1699954db38a8dc8cc6f27985
+    m_importFrom: Packages/com.unity.assetgraph/Editor/Integration/AssetBundles-Browser
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 38964569356fc0f408d65786ea2c747f
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLogException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d30a4104a18db1f42a5da276c7db34fe
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetEntryCollectionEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 75ce4a2b9ce8e45f9bcb12d38ed95952
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeStyle.guiskin
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d3cbfb08ad9ea4b4b93c2c2f3cc73e70
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingStreamingAssetsSubFolder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b9c8582a5e831f4788aca482a4c95d3
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ProfileValueReferenceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a5f5c8d460f574746b9653bd4533c9b3
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/ProfileDataSourceDropdownWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e59bf5e81ff06ac4ca62188908370bbb
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/BuiltInDataTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fea4e72e0941e42bdb611e8fa916dd2c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9df82cea39d69a4a9e27b9eb6103717
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/LabelTable.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 67be190ec5cee604dbe5bb9329252a54
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerUnsupported.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65c82791d288eae4b8814a70bce6c8d2
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 213cbfa5464d56d468883a57132a0582
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/IGraphLayer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bd1bea4352ab4fb49a0d15da275cd26d
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/CheckSceneDupeDependencies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fc13c309185f5ef4cb30649341ab86fe
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/DiagnosticEventCollectorIntegrationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 357dba0de306645a3992bbd2621d71bc
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9aa68e6fb55252f4b8434690fab30a8a
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/BuildReportWindow.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5064f4f2812f9e741be2105c6c338f98
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9b74ea960fdf3432c9764eeb4f29c397
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/RecordUndoScope.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d545ea8b7528c004681a86c811e92281
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/DeclaringReferences.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ea375d4d72197e143ba4ebfe5d21ed7c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetUtilityTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f732c6455ee1417c91ebd421b5ed6f67
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/BuildLayoutTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7b36421f668d647d3a0f7a8be7f5e5aa
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/SerializableMultiTargetString.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b40c3dceab2ff14cb0e00e989fd8b27
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/FileNoIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2b4b92c4019054aee96cde27365b8394
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GroupView/GroupAssetListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d136ebd2e9594408296041252ad6d2a9
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/IResourceProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d314656232cf1b24a9d7e6470f8f72eb
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/BuildBundleLayout.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2c37bb888dfcc1449822d8dd13555cb
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 392da734bbda8ef48a14423bb399280e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetFolderSubfolderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfe8ad6aa7980734a89a782fcc937045
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/AnalyzeRule.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 61fc287de507f6d44a8d9a6ea2f944df
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1ca1e1e405efb114fa23798a8d0c4c56
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformLuminIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d314bd85e421fcf4d819507bd4554b38
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/AssetsContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c3607deff504fbc4eb56e16a80415a85
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadAsset.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3db256bbb74b81f4b9c9b3495ab97e6b
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/ResourceManagerCacheWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 66938b26cbbd898498a9ad998e49dbbe
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingRemoveResourceLocator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f498126c527f05c4f9202c95abf8ba3d
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsLabelMaskPopup.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d21ca7a30faf461381a8cc734ab6a8a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V1/ConnectionPointData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0127c38a607d9474c820c7f5044c18b4
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/FileNoIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9a61d228cb4787b438c094a31315dffd
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/Unsupported.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 142f7d4eae11d5b41a02b71169f6b854
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65ec3f597ff024afa8b9a0ce8c69f9d5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyImportSettingsConfigurator.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7322e72cf9fd147ec8957c7c99d578e5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 058b74f9ad5dc0e489456e842029fb0b
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/EventGraphListView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c7613ad25e9a1794eb580050f86f4889
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/LinkXMLGenerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9d6beecfb0c514c9782641af7bdbe9ba
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/AssetGraphWindow.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d8f1f0a84c60dd84e8aea13155080a5b
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInstantiate.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cf06ec3dfe8d94a49848e19761db76a7
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/GroupBySizeTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a7305448792709444a2866d80750c130
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadResourceLocations.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 459682b384b2b49bf9ab32341ad85637
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers/AttachComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a752b6e9dc874574babc9f4b5c08d5aa
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/LegacyResourceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb70905fec4ff495e9ab036174bef78d
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/IPostprocess.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5e95c6380691441ec902f183f790521e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/SerializedComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fd53d86c6d81efc45bd1caf873084af4
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/d_icon dropdown@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d415d633eb1c9d44c854bac7bdc6d17f
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/ContentCatalogData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b47f3ece14ba6b74e883481b6ef86d53
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptPackedIntegrationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 58f7bc10c14254efa942520342cd8eba
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__SplitByFilterTest_TestRegexFilter.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5c21d85484483e34a8ce3ddd74a19183
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableReadOnlyAttribute.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65072170869d44a69a6dcc814a0cb197
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/TextureImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89baa4f52fa38496e8d0d6808762034f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node5.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1a93de9886d3e5046be743fac772d5c3
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingClearResourceLocators.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f7aebf13e806bda4db01138506100f36
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInitialize.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1cc4426cea05e4d9a92364da039f01b7
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node4@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6665e03593d44dae8f9e2ada8752d2dc
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/EventDataSetTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 601e1e43289e4cf891b8fc1f5acf6917
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/BuildLayoutsManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f7db1cf7b24f9784a8c53aaaa271654d
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/InitializationOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5102485b735d4d0439d6da999841b9c8
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsGroupTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4fd966b3a8792f64b8089a68443e19e9
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/UnityWebRequestUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ccf83b5066e84ac47ab9adfdfd9e484f
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/TreeViewItem.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 643c3989e991eb74ca3064e6baa4361a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/Readme.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1b3dc357d1344cc5801bb6d5cb46625
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetReferenceStreamManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7b6713137edb6b2439d3ff26eb990180
+    m_importFrom: Packages/com.unity.addressables/Runtime/AddressablesImpl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2d597abbd594bb545be7bc273326f95c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/OperationCacheKeys.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 70c658661ab7843829cea681cc9c9319
+    m_importFrom: Packages/com.unity.addressables/Runtime/AssemblyInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e36c585c3271c814da8d22475e6698d0
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 406e7a664cf5b47b8bea6929347c3122
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node6.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8b70aff15e9f9640ac1126bbb4f1b75
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphLayerBarChart.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2a0d850aaeed24132954c8ccb9b7d238
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: de7854a5f7ef2054dbf92514bee6d796
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetSettingsAnalyzeTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 66a7a5932b5cd4dceb8261d66734b440
+    m_importFrom: Packages/com.unity.addressables/Editor/HostingServices/HostingServicesManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5834b5087d578d24c926ce20cd31e6d6
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/GroupSchemas/ContentUpdateGroupSchema.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7894a5761247a462097d180e2cf09a54
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/GroupingBySize.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 741fd6a7eb857a74b939184269d01239
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/d_History.Forward@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 207f0a157f97848d7ac7a9009b66e802
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyModifier.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b571e819498e94243aaab6be45486255
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 99fcf6fd27648d1498338be53a9279a8
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadWithEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c5196e122b8e46d3aef4164c81252e8
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.ttf
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 785a88dedbaea4eb5b50019325ee54b1
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V1/MiniJSONForAssetGraph.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0afaedd72b2d48c89c437ea34dba208
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9724bc0abad514944ac70ce952ac4c64
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/AssetGraphEditorBaseTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8616508a31d0c47989ed4cdef04c5f7f
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/HostingServicesProfileVarsTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 78ea1f78528ed4814b06b8621fd908eb
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fe2e19f73811c442ca0c598941b71e27
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/AssertUnwantedAssetsInBundleTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c82c3b37db403f947beff6c5abacab7e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadScene.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4061552d898b3a04696a1cefac59e068
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInitializationOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: af5d5017c0150f541a7ec9eacfded333
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f32ce06cf1ea74fd8b02fa04dee9692f
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/stylesheet.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b781cca3dbc4b12bd34a2f36633abca
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/FrameDataStructs.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3275c47c6e434362a78bf0ec660eebd0
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/EventDataSetStreamTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e78249b603b049aa9dfd59ec52d2f30
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceLocations/IResourceLocation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba5033d0e43aacc4aa1fe4bed1f637e6
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/Exceptions.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89f8257facdc8e04fbf8eefd512ee6a9
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerUtilityTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 892cf81d30f8a6d47a38990bd18b822e
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3e97670d537e784e9f104552b533056
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9c6f4787a44c0462782ee7bfe082d1f8
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupBySizeTest_TestGroupByFileSize.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 90c319597e27f4efc898a09d71c4aafb
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/GraphCollectionManageTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 90f369f416671475d86e05b86c9d8139
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/PrefabBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fd83f78206d344ebebc090b37a2dd114
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GroupView
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 44a6309b482db49b0a5aa08e393f503c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ResourceCleanupTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 99221d63cc20cba41a19c8095144b82e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLogWarningFormat.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9d68e463588743e48c547b980d041f7
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/Simulation/VirtualAssetBundleRuntimeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 907baae0102874dd49e7f5b2c9dbd168
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node0.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4828dd530e30e4fa6ad842215386a139
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/SaveScope.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb8458bc10d7afe4f8ad0204ab6f1fd8
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/FastModeInitializationOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bf2de0e8cc0a18b4d8887aad8e168377
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerPackedModeTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 832363b0cc1d7e44dbd8750e91343bd1
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceProviders/ContentCatalogProviderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fdc9a4fb30f6f48c3b5f1f38a2ffb2b5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/SerializableMultiTargetInstance.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04fc02c04cf134e3f95f79cc893edde2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ProjectSettings/AssetGraphSettingsProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9d5c72ca5a9734f80b3a76cdb4232e21
+    m_importFrom: Packages/com.unity.addressables/Editor/HostingServices/IHostingServiceConfigurationProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c6cb8c4cac7a64d109ab5f65c0f85aca
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/LegacyResourcesProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 94a061db0b960634c995d928535999b6
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetInspectorGUIGroupsPopup.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dd7e32a5331fc4d8490ba36efe45cb0d
+    m_importFrom: Packages/com.unity.assetgraph/Editor/Unity.AssetGraph.Editor.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 413464e71470e48cea3073a1ea418f7e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/AssetGraphEditorWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7421e9434772c1542ac5a39c1a9accc5
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformAndroidIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2a90fe91badaa384d9ca33b949f6881e
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/TreeViewNavigableItem.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 20dd03585482b4892a07d6dd5adb3ecc
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/d_AssetGraphWindow.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3fae9482157db504bbc96bab93cc2e52
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingCheckForCatalogUpdates.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e5d17a21594effb4e9591490b009e7aa
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/GroupSchemas/BundledAssetGroupSchema.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c63ec1e574af01940b50bc1959310719
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices/HostingServicesWindowUtilitiesTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9291133251fa94285b90b7ea1ab5ae4f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyPostprocess.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04cb0660197e64f278791d91a18431a0
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/SerializableGroups.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ad9b7be1ce5884bc292a5ba51184b915
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/BundleConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 24a97ba653e6e4d7a99423d3c1bdec8f
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/ExportToDirectoryTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f5fa1c5d453431041ab1e49b72e569e2
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/GroupOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 50b98fe2646355b489bf89043179e554
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aa28bcae85fa11447917912c39d705c7
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/IgnoreFailingLogMessage.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d9bc52aced9c3294b84eddb71b6f9891
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/DetailsStack.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7b211411dd3d6474cb7aa38594e05af7
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/TreeViewPane.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 18678a28cef624aeb89c5717c46be35b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 000d7a662089d6b4090fb72037306f82
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/BinaryDataProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c01fbe0a29ffc54fa5adeef1d9c2c24
+    m_importFrom: Packages/com.unity.addressables/Editor/Icons
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fbc295f9fd7874aef834ba4d3abd555b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/NodeGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5d679e462d4f4ab084e50d088f51a44
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 722c9cb137e6ef0458798b9a9e0d1204
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ProfileSettingsTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f1ede4836c84544798220e17204830f
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadContentCatalog.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b5bdf414fcef4cf49b67c56a99fea355
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInternalIdTransformFunc.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 85d34cd37047d904e847f7f5e2b1bd25
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 736b0a4506b3e4d9cafbaf59961d22a9
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V1/NodeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b44c2db511ef19949950f4b3b93a6e53
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/CacheInitializationSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a881c35c9c8410fa42113c516121903
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/ProfilerFrameData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 738ea664e66824aa885346392956abc2
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AssemblyInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d8730a30170c42c1924ef148010adb5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/ComponentMenuUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f573a8a33928e4448b35f4e2b0f09133
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 21df0a1c085254641905e0eb1dca9806
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStadiaIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bc282c9c64eccda4392e29f59439a37e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/ContentBuiltCheck.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 10fd20f634856da4a8adcac07d018d68
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceProviders/ContentCatalogProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae16f41d6e6003e4f851a51e3b852bdd
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/BuildReportHelperConsumer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c39c5a44c2b90c4787a92f26e3286f4
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/Layout
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 84f724d4704815c4e96da7a3308f0be7
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/ListWithEvents.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 92eb5dcde0e0343c2a063849d7a86b93
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ConfigGraphEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f6d71bdd364b36340962d0eb7f11980c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerFastModeTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f26930fb33b669841b9cb185014ac881
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/DetailsSummaryBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c5621f8a204fa2848bf4a56deefcbb0c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/SearchFiltersTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f7b9efa5835d6249b3b62a7cb09877d
+    m_importFrom: Packages/com.unity.addressables/Runtime/Services/PlatformMappingService.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bfa3710e9aeaad547bae8719bd664926
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AssetReferenceTestBehavior.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f6d95a065ad1d84fa0d05a15c369e81
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetReferenceDrawer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 46f31ab199825eb488ad8f2a8f6d1a4c
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/ProfileValueReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d80d649a59df7424dbd5e5c326a096eb
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/IDTransformer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0a8d5f6b5b77645a8aee1e0f93f67568
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GUIHelper.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a7f04e028569f74e86bd76972ff7b2a
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/Operations
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 07426e5d16eb07442847b80692e452c9
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AssetReferenceDrawerTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c3b0971a8e5dab44a959bfe453348846
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e1e6c6d3afa9b8d44924fe8dcbee49a4
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/PrintBucketInformation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c13c4d40f03b84e489576570ec2daf5e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/MyRule.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bbb281ee3bf0b054c82ac2347e9e782c
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetGroup.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 45c9e63cc2a08d54b8c615400127de4e
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/TreeViewItem.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 95d66b6da395d7142abdc96d603e7eb0
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/EditorPlatformMappingServiceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d660cd53240140bd9d3975354f1fae0
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/Layout/BuildLayoutEnums.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fe5d67dc3f01349a8ae810148424c3b8
+    m_importFrom: Packages/com.unity.addressables/Editor/HostingServices/HttpHostingService.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f31ad13175873843b286eb524d6f54d
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ContentDataTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c48a079ac200400380bbb54b66a2ad09
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/UXML
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 36fc22606d318439b848ce545d2f6935
+    m_importFrom: Packages/com.unity.assetgraph/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8154e1953b67f400cb8a7ecf91490326
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d91d0dd2a4ed2df41b742f33881892a2
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ComponentSingletonTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 79fbad0cce3fe424681d87c3d2642165
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/ReportsListItem.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3f0645bd0f9b0ea46a9bec32c403ab9e
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesIntegrationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 14a32d4a270f44283bace2cf0ca5bb51
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/RegressionTestNode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f1a1c0162fa02cb42ae827251833e0bb
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptFastTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6fea6aa8d800ff94baa9d7edb9754298
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressablesFileEnumeration.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2c53f1cace3a81a4bbe8280d05abda4e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/CustomTestSchemaSubClass.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1912c97b524efd244bc0647b18230c7e
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressablesDataBuilders.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b5654879e399f0a42abf0e92a05b1eaf
+    m_importFrom: Packages/com.unity.addressables/readme.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9699bb034e3d543dea089ed1168ce619
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/SerializableMultiTargetInt.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b68615e65d03ce49becfd9eb02f7fa2
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetSettingsInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a8e45712f43ff0645b809f8a5c1ba37e
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/BuiltinSceneCache.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 67b4de080f56845a09dfdbf9742a16e5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node3.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c0ef623add767445284d290e629624fe
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/Node.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: caa347671b900804bb0624c39d5404f5
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 01432b351984ba94aa0624cdc2783398
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/DetailsPanel.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3fe4baf3821dbe44ca354c8bbae559f7
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/BinaryAssetProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b929608ac59544de3a587ffc4080d2fd
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2/ConnectionPointData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a32399ce774d347618afa06d4340816d
+    m_importFrom: Packages/com.unity.assetgraph/Tests/rep.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8559dec58f92398448ea2ea83fd63c3e
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/BuildScriptBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69d3f19413a88324199b41186cf34b9f
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressablesDataBuilderInput.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04e668989dcf2499eb5662cb399f5f44
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Modifier.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f928cb80657c364680d0c25895df60f
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/WebRequestQueue.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8b29c1ae0b68044bbce3aba8fc64eb8
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel/DetailsUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b5d9831e406a04294b27e5e2577dccb5
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/ProfileWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a4b9c96f39944b62ae70bf77aee6cff2
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/StyleSheets
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1605c3ecde3c79740a38a7d320a3f234
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_DarkTheme.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3fd787210f08d364186b9df36062df04
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformtvOSIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ea72f96947844c99a3bf31644980db9
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetReferenceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f88726da597753f45b7ea82733006421
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetPostProcessor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2abf0057439a542baaf1fcfe5c889ace
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LoadBySearchFilterTest_TestSearchFilterWithName.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 995c7b348de57438c891b65236c1d7b2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.m4v
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8b45d496263c4f4da1cdd5c22c51cc8
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices/HostingServicesManagerTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 68b7bb1dd436ef14198113cfcf1c1c46
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3cc36a7b9a2cc410080d519bcdbaea0a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/BuildTargetTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f9793fab7c5a2d49a99acdc614bf45d
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformtvOSIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49c2c229315d04249b13bbf17069f486
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptPackedPlayTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c2eb630b3a204847b868607a539fb4c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a621b3eb315745c8b95a9e354708dd4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/TypeUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a0ce64154675d64ba2a3fdcb3e92949
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_DarkTheme.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 519a7d8c957b74d4796e109c00242ce0
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node8.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: befd95e3f3af5eb49bf7c53d00cb4d44
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e51f1aa10d814ff4a85c671e5120de6f
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AnalyzeWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b7918bea6e94546af99e5406dd5037c4
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/SplitByFilterTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e840cb3f9e1c79f418991c22a9bbdd28
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadWithIEnumerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ca17557f450440f40be1d7fce672888d
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/MainToolbar.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 988ed84773d02644cbc268043bbd8864
+    m_importFrom: Packages/com.unity.addressables/Editor/Icons/AddressableAssetsIconY1756Scene.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a1db7ee549d5147d4b42adf1b7396354
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/InputBG.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b58235bf371a87a429cb8db2eec7fad6
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingWebRequestOverride.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e85ee2947fe44422d90dab56e1efdd91
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node4.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e68d922aabe4948a2af68d46db95d4a9
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node2@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3706d7e9bff914014a8c0d30e8f854e6
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b42ee6f5a38f94b4baafd3c426bee7f5
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/Operations/ChainOperationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bdd672a655042ae4fa4c3f8c8d8853a6
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/AddressableAssetsBuildContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 281140814d0e14d72b24887894bfe14e
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/ModifyAssetDirectlyTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 68204acf7cb1bb74091cd6779c3da569
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/Operations/AsyncOperationHandleTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4235bf1f6608b4e5dae5965f02fc21ee
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/PerformGraph.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a210a02d6f3e52247a958bb97f5850a7
+    m_importFrom: Packages/com.unity.addressables/Runtime/Utility/SerializationUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d9b376e058dcb4ba1a06fc3718529127
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Filters/FilterUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0055cf136f4524b349b00090b98b9f95
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/GenerateAssetTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d9db06067b4d4af5a0622f149725e5a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators/AssetGenerateInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 62d523cfe47d64e43a6d72011ad4a7ca
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/EventViewerWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 11643b1a70376ce4e807aa759c0f4dbd
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/ComponentSingleton.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da4f50d25854f40a284136aeb3f72c39
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/AssetGenerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a41d2c466f24e42bc8aea8a0a0a45eb4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Exception/AssetReferenceException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a99cbf45313241adb3f4cf5332d0866
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/GUIElements
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 18ba5a40298f2f144aa7d896fc2f4420
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/ContentTab.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 41f1a51b4873d473d81bc70abb55d198
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/AddressablesPlayerBuildProcessorTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b38733bdad235b34b993286370a11791
+    m_importFrom: Packages/com.unity.addressables/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f4d1d59e25085e489592b2342c86673
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AsyncTaskTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 61189accf2e8d427e8a15c5ccd4db00b
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7cc57ee31ef3a44389458141063b7b71
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/PlayerBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8aae9ccc172d3fd48a20726e5c902489
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/BundleRuleBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 03115f3e85a5cee4ba080db3d02670e9
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressableAssetSettingsResourceLocationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a972530fcd6a48b4480b570f902b2e19
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AssetReferenceDrawerTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 523eb70c378aa40b68c2874d02d485ed
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/MirrorDirectory.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6faf7d815764fef408b2e42c8982f2d0
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/Initialization
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 948f5bac7ffcefe4e8dbcf04b503e79b
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetEntryCollection.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35a493a535627401094f36bf216c0306
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/TestObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: af91525c769cf6847bb9b9e32c74db73
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStadiaIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fe634a3decf6743b4918c03e2ae2642c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling/ProfilerRuntime.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ffc89771dc707404180484a695606239
+    m_importFrom: Packages/com.unity.assetgraph/Editor/Integration/AssetBundles-Browser/GraphToolABDataSource.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 05d506d6f1d0c4b66aa64cd1402fba70
+    m_importFrom: Packages/com.unity.addressables/Editor/HostingServices
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 327933a391986b441b4355cdd9257400
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/CheckBundleDupeDependencies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35a23666a8db46c993efac68b4be6a51
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ContentDataListView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f6fc6153494d34438861807b8e2ded93
+    m_importFrom: Packages/com.unity.addressables/Editor/HostingServices/IHostingService.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b5a753a236aae5c4aafa36766a011ec3
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/WebRequestOverride.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ee4cb20bb27b584999aca23d1f30f93
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/PotentialIssues.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9d22c34b09544790a895928c8472805
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/UserPreference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 30d4862aba3fd4d4da9bec946a2af813
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/HelpDisplay.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4a0b85fd49f18421dbe7ab1207ce08d6
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__AssertUnwantedAssetsInBundleTest_TestAssetUnwantedAllowShouldSuccess.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfc8dc1c0a450b449a22a6a04077d4c1
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ToggleTextExpansionButton.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb428e679ba4945b382b08d1e15bdbd9
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyPrefabBuilder.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 468a46d0ae32c3544b7d98094e6448a9
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4d148220e8d54054e851e5c220feea5f
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/ChainOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 68513e64baa064f4fa5fd516c205e836
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__SplitByFilterTest_TestFilterByType.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 634d22cc95ac69641b8e6f5619e01630
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadMultiple.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 87c0e75886b4481693ca963bc0955c1c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/EventDataPlayerSessionCollectionTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f3b9de71a388cba4c81fbdaf789def84
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/BinaryStorageBufferTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4edd7b9c0708c41c394a7eccef5710f3
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node1@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 849c79b81fe9b7d4dafd66c2b0335be7
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceProviders
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 207962df4115f4a73bc381985e110fd4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ConnectionEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28fb0900b6e316143988322b6f94201a
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetPublishEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09b3b931802726b4bb0194bac55fa739
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingResourceManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a454ac03434eaf04d8b96dacae95e830
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphLayerLabel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5127a10aa9aa1f147b436d8241d02ce0
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingCreateCatalogLocationWithHashDependencies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65b4415e251f7254db22c87ae045dd4b
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLogFormat.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2e3edb2e315041c8981dea915573b24
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/AssetLog/AssetProcessEventLogWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0931d4af80159344eb7e15928166dafd
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphLayerEventMarker.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4e9e9880c451546738ed613faeda6c89
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers/AddGameObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ece4fc36f044b2544aa5ce4f5cd12422
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWSAPlayerIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1cd10f53451414f35b4a646f7d58558c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 25714517fd8c0f048b3a5d95c94233a7
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Data/EventDataSample.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 672797698ae4a441abfef0263c6d3e6c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetGraphController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e2ff1980cce8ef4e88f793c1db900f4
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadWithLabels.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 144221f2da0a9494c9d1a2f871a952e8
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Runtime/Unity.AssetGraph.Tests.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e64db96403bd54244820848cd058a3be
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/Profiling
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c2d1f26ef3845fab1313226df7724c3
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/TextDataProviderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 84651a3751eca9349aac36a66bba901b
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Unity.ResourceManager.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9a0e76a5271d67041be5c790b6c724fd
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInitializeAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 504a37785439743bba6a7259d90d6652
+    m_importFrom: Packages/com.unity.addressables/Editor/HostingServices/BaseHostingService.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 770340dbd8f200e45b2bb9e820baa15e
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformXboxOneIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f6c56ead12e41f385f1985399342ddf
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ProfilerStrings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a92af236ef5230b4eae4fcfbb2b3d41a
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/TestObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1095566ae23dbab4985b87dc92390bc2
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/InitializationObjectsOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b284c6b15a0b84649b8bb460b974cfb3
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/MainToolbarButtonsDark.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da63802f0abcc43cda5f5f50d79cb9ac
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ProfilerDetailsTreeViewItemData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4c13fae742fa24ea9beb76b5cdc2bf5b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GroupView/GroupViewController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f340583ed16e937479e7893692f4ca9e
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/SummaryTab.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 17f5e465a53ec43a6b8177a48631da66
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupByFilePathTest_TestGroupByWildcard.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ce5936f270f2246a48389efc0de19c01
+    m_importFrom: Packages/com.unity.assetgraph/package.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6838d1c6be001444ab0dfe90e45b087e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/BatchBuildWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a6ea556a4c75be4a88f236f22eec817
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressableAnalytics.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d34ce007ffbd4e74c9151022c3fb56df
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/BuildLayoutGenerationTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e3a3bf53490948d1ad369577a66b263
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Exception
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e7593765c5f3448889247c3e3f0e8ff5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Loader.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2725ffbeffba5ae4fa95c104293c60bf
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/StyleSheets/Ribbon_light.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 76f42306b205543bf8fd126dd531dd99
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node8.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6061cd2dc44bc4639976b2ca7abe755d
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Filter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 220bd545cb0f64493b48cad989fd4fae
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Exception/NodeException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ac5a4eb1d8da482694ba467cd1fc34f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/ImportSetting.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 86d78906b9304e148389fa0f7e3ae6a4
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceProviders/TextDataProviderStub.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7fb84c109abae6048a38652a447fb108
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7cbf9ceccd804b446bc46ab595d96182
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/Preferences.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 027c478450e773e47b8cc1fbe7455f72
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingRuntimePath.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a4c1f91c2b38c564e9e4ab0c5ff1ac1a
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/Layout/BuildLayout.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ef7207c080a54574b9bfc095d91595aa
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetGroupSchema.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e68d307cab9a04f81ada3f4ad7d740f6
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/BuildPlayerTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 59549f72de25b4c46b48c01b3e64ec90
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformiOSIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 834e2bdb5fd1336429e26ec5bcbb77f7
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressablesPlayerBuildProcessor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d9b4067bd3135d46a8f5e265bee07cb
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/Simulation/VirtualAssetBundle.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0df1a0e68a43f4f10b41dcc7f59966ab
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupByFileTest_TestGroupNameFormat.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 80a4732d85a576b4da4c5492957b9189
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/InstanceProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d9a6f10d6aba7e40b982e7ed18ecfff
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/UnityWebRequestOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ac62285cba7c64612b59f2c0c4124c96
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/Layout/BuildLayoutHelpers.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e43e1a65262edd4f99dd21ce8ee50ad
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingGetLocatorInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f50c98dd2bb8406d86f304cb88fdc57a
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/HelpDisplayManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3534c90cd89bf7342937035fa421fd9c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/TestBehaviourWithReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dc63b9e976cf2234597ec4cef20023b4
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_LightTheme@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: faf32c22a012a554c8e6e71e64844c23
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/DownloadStatus.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7576b8f317a11494eae65b2335689272
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/OutputBG.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a6212fd4877a4704aa905b317e16bac8
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ManualPercentCompleteOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7bcc4daca72f2dd41bca1527a1bfe3d4
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingUnloadSceneAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 978d705cf413d594fbf9ad1580b25eea
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/SummaryTabLight.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a6004f87009b4fad9ad9582dc0c7016
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04e83e1d064b147fc97851b317d0a292
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/CUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a8a8a51840bce43499129ca737ca10a7
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneOSXIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dafe4c82ebed44b81bb48ef142b5386a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2/Settings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: afb0cc9ce87ec4aef95c9b4c2261a3b2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Addressables/AddressableAssetGroup.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0f4712e2e66a54047bd4181d8a3d827f
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/DetailsView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: abc77607c2a62ef48b8f7dec55cc6d91
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/AnalyzeResultData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be9205585983c334fb0c7f3b8993de35
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/DetailsPanelSummary.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3cb0ad02e20d62441a7d1825b5b20dec
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/DetailsListItem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ca20cc03036f2e428964397259f253a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingGetDownloadSize.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 76fc1281e9e0349bfa3740ff8ffce865
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers/SetReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb39a5e8a9f342946b37f08b70b59d02
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/InstantiateAsset.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 255df104f26ec08439fcee2d0df9ae0b
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingCleanBundleCache.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 082ff03cd7a4f9943bafa0d18316d83f
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/MainPanel.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c499a2a91e3095b4c8e10d8f7de9bbb5
+    m_importFrom: Packages/com.unity.addressables/package.json
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0bf674c3f0a4e42228c87053bedac19e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/ConnectionPoint.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b59656e937e034d1fa0af1f755d7ddf1
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders/ReplaceWithIncomingGameObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a189bb168d8d90478a09ea08c2f3d72
+    m_importFrom: Packages/com.unity.addressables/Editor/AddressableAssetSettingsDefaultObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0137cac2394924335881112475e86363
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ecbc77d52b04a4ea0959b200eced849b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Addressables/AddressableAssetAddress.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 63e950f5b8d524d43b391e54d52f9ac0
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableScenesManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e94e1c7d8bd4b842a1d59b7eefc8a34
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingClearDependencyCacheAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ad3aa5a0429b934a8ae72ceddf3b2bf
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/CheckCatalogsOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d98578e11c3b84590a32d4b988609228
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders/ReplaceGameObjectByName.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d9a4cee567dcf46fc919420c7d668c2e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/AssetLog/AssetProcessEventListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 86a4f4dd6530757418ab820c2c781436
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/AssetBundleProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d123776dddc2d44d7a26dcefb59f3595
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c250a53221434148be3ac31d903d8c2
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ObjectReferenceMonoBehaviour.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2134a1fa3afdb4b909185365e52219d1
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyGenerator.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e4e9f0f7eaff4094990720ec2b944faf
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/AddressableAssetsBundleBuildParameters.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 858c1e2c3465cac42b4088372441712a
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/SummaryTabCardDark.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 11599b042eeda438193915d6d4b2e25e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V1/SaveData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 488e0dbf9a6f5ac48bbe7875855651f1
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesTestFixture.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c968f079e79719d42b0dd2761ddd8e2c
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReportWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9c5f681e19be9ae4c845e9227f9b755a
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/IUpdateReceiver.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e53a8e6b78f1a4f4085da193bd303aec
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/MainToolbarButtons.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 85fb4bdd8a688844b80dfa348b21a703
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5db91ce60c3e4e44907fbbadd68e6f4
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/ContentUpdatePreviewWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9ec0ed3a7d1ee3c4e808cd29000a5b70
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetInspectorGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 186be03abcfd84b539b9b8cc418ae65d
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers/SetSpritesToAnimation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8adf019998f124b7d8692b8083b72505
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4188ec7e6ce3549bca02d5a372758f36
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/IAssetImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 15f7962ec30713a4992a23b060cdf71c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/TextDataProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b22c8ae15806ae44785d1d2528127632
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/DetailsPanelSummaryNavigableItem.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c33b04c403c19614395e83e691d3170a
+    m_importFrom: Packages/com.unity.addressables/Editor/Icons/AddressableAssetsIconY1756Basic.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d77c469320df374f98081de5d7673be
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_LightTheme.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 238dc259a6e2a034a9a94e1a26ebb37b
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/GroupsContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b48a2f13c40b045f9b2205828dbd7fc4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/ConfigGraphIcon.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9bdee3e78787c4f539be1d0ff103d17f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Addressables/AddressableAssetLabel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a68de7e1271fb487c85fbb75941f9b17
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ConnectionGUIEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0e179c9e7e4094b6cacb7dec874f7144
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/NodeEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 91c0d72bf78e7e042bef124e1c546c32
+    m_importFrom: Packages/com.unity.addressables/Runtime/AssetReferenceUIRestriction.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4adbd11117ba14195be497c6ee4bbe8f
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices/TestHostingService.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 48d49afb756d3456da9e2b0b66b2221d
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fbf1bb8889d9649978dd5d2efe02cd48
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/TrueTypeFontImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 596c9ec38e3138046aff034674a6887c
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformXboxOneIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a50575a181d034e50b6cbad0c798a66e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders/PrefabBuildInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b4b8af3d4821b45eb967f3864437109a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/ImportUnityPackage.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 62587f30b7ab6b44e97cab2ebbbc1a5b
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/MissingReport.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bfe3797fca69b44589c23dbbdb59ee52
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node7.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c6a0011805f56164fa0eeb10234c2a32
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/SummaryTabCardLight.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1f06a356b1a40fabd0140d300405015
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ProfilerGUIUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e2e0ffa088c91d41a086d0b8cb16bdc
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/BuildScriptPackedMode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c6b3bac846ff402eadc1eb18359ddf3
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators/TextureScaler.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1be99fd759d413e8e2b03aa29094d36
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/VersionCompatibilityUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 859e5046b2060774898d8e87f4e78761
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/Layout/BuildLayoutPrinter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4b728c7822165f84299ee3d3af7ac326
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/GUIElements/AssetLabel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 68a8222d3f84e43fc99a00702bd91e8f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/SerializedInstance.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65c22f76b77044875a46f653f516c019
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/NodeGUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1953985c2034b454d88f96cc7f8528c3
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/LoadFromDirectoryTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a58617e7f893049179cb9ed32310dbfc
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/LogUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1bc2d26162184521b3d75065fcd5667
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/GraphCollectionDetailTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a6ea1740a8df96b44bd23845119733cf
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/DelegateList.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d263899d903157a42836df9192ad37e7
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ProfilerTemplates.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb8c96287a087455ab5f02f76f764c10
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node8@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6f5f2eb71e71b446dae10e69b8a38b2c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/LegacyResourcesLocator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c49e24ebadbf2c64cb350d3f62c0ad14
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetProfileSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b199839a9e8f347ada0d93a4bb32bea5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators/Duplicator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae3ba93a359be43028ab177bfbf6af50
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate/setting.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ad0e35b994160844b457bd2836737b2
+    m_importFrom: Packages/com.unity.addressables/Runtime/AssetReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c051a7c17509c9c4db8019ce2f8df3b1
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLogWarning.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: caa3431363af216479bf77b9d16e8c72
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/DelayedActionManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 76c0bf6fed0654e94b1f608efcc19f53
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/LabelAssetsTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5eba26bbba87e4b7fa2770f653d5ce25
+    m_importFrom: Packages/com.unity.assetgraph/CHANGELOG.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e5d24b68e180f14bb0e8fb153332817
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8a0a5b2a9f6674dccae5da7df81e5a98
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fa2529bf9209243c48e658c607b0c8f2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node5@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a1eb7ad3cb0ad104b9cf9b6018e9d578
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/Simulation
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 774cd729e4d232a45a38ea35fed32c81
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AnalyzeRules/AnalyzeRuleBaseTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4a54c5871bef465498da44ad7451313d
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/OperationHandleTypes.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 86ae0199f263f5e42adb6d8581811534
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/PlatformUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 95956aed0a2532747b6e9ed4aa3fd547
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/UXML/Ribbon.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 97094eac59b52044e8ae8aab18264deb
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/HostingServicesListTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e4c82d3e76e64c5f9c64cf0c38aaf42
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers/SetProperty.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b6231f2625ddce4e99b07635ce1d101
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/KeyDataStoreTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b28e4f74756c9e3418600f517d56e9f2
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/ProviderOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dc450d61563c64aff935a96eb810c6bd
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__AssertUnwantedAssetsInBundleTest_TestAssetUnwantedDisallowShouldSuccess.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 15c4c65a2f08147dc8d82b3099685af5
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/TestSubObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c3a73b848f18b6b498c76e82b2551f0d
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dc3edc4496b6745b1a650261e54f33dd
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/AssetGraphUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 83a713b47f5b64d188f7cc0fb6c1ad90
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: de23aaeee6fa41346a6886273da4f875
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadAssets.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ddfceca50d66489dbc1b6285a804190
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/VideoClipImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a4691412a8ea49a4796116d3d5f289cc
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWSAPlayerIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e98b4a8982e76bc4d86c10db25cd7193
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb41ee89232544c41aee0734aaf8e9fc
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__CreatePrefabFromGroupTest_TestReplaceGameObjectByName.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 20b1b37a2183e4f4eb443dc216e58e1e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetProcessEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49850dfe65879f949bd15bb7738b7bdf
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWebGLIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c965ab7077c7542bd9130d8c2a8c3c95
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/ProfileGroupType.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 64253c20cf541461ab2e8099d2025732
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/ShaderImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dab20ed5a5e3e40d8a69e2f6cee60fe2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/CustomScriptUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ff5ae233625844a6ab198d26b007dd7c
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b644b787231a1784ab6bbb39217a63b9
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptVirtualTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 52dd117dc34344058952aab4660ca971
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/DisableAssetProcessEventRecordScope.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c7dcb1750e8ec04cb1c92c4cae35c39
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/ContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 391178b0da267493d9ee22c8f353b40b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetBundleBuildReport.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dba581c300a664f21a95c2b8ac6c0e61
+    m_importFrom: Packages/com.unity.assetgraph/Tests
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ce10b9a173f68e7439b96557cb1bc223
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/InitializationObjectsAsyncTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f876bd6f2c4343308d812b7ff184217
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/BundleBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3601319bba6273845939476c3b3bf510
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bc7120d80c21d014885f3e7a4d4217cb
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/SerializedTypeDrawer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 240d85f3e514d2949a7aa8c95b24ef2f
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/DocumentationButton.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b8b37f5037b1e945af5621a67f45bc0
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AssetGroupTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 928b290746aa740428fdb3021b136b4c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node6@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae38715d198830145a8bf7fa7adf9ee1
+    m_importFrom: Packages/com.unity.addressables/Runtime/Addressables.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35ddb9e112b0424479043537f5479a5b
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/ShaderBundleNaming.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1575d1c3656610c40ad50c15e8f5855a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/DataBuilderInputTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4d13ce31bb134be28f5bbb25442e7aa
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Runtime/AssetBundleBuildMapTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00f6abb2299813b4881f1f2b0f6640b1
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/RevertUnchangedAssetsToPreviousAssetState.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bcb0c45f124e843669cb245a2c43f67d
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Filters/IFilter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 43224c404bd343b44a2ecd99237e285c
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/CacheInitialization.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e779c13e241463d4ebc307772337cb19
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInstantiateAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c8e7a7789891dd440b809c2cfab69ccc
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsGroupEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 75340b8683e5f084ab85df09444ac24e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/Preload.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2396a89559dfd474e9f16d864bc7481a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders/PrefabBuilderUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1a3c5d64ac83548c09dd1678b9f6f1cd
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetGroupTemplate.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 58d7919bd300ea94c8bc969913548cd8
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesTestUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 680fb597e686741c7a2e225708f654d2
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AssemblyInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81e994b90fc45fb46963bcce32bf4969
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/ResourceManagerRuntimeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6d6cf7100d6f3475b8905f2f6383bbca
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2/NodeDataImporter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2b227c56ee439f46b08efa638b27a84
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/AsyncOperationStatus.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5e17c64e4d2cf1742879de399aad96bb
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/VirtualAssetBundleProviderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d370242d9a79ba64cb55333c896bfdb0
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AnalyzeRules/CheckResourcesDupeDependenciesTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 068f1398579174bac9fc1f39aeae52a8
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders/PrefabCreateDescription.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c426734e186f9da4381dc0990e602573
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/IAddressableView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a95802677a5e469db2346b7c99cdbe84
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AssetReferenceDrawerUtilities.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9e65091a2762811409d478d08fabe665
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/EditorAddressablesAssetsTestFixture.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81e07f4bd9fd35f42828b48ea81bbd13
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/MiscellaneousTopics.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e63e5dd2cdcb394984e15b78da0a927
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4d398e97edad129428605a181ebba953
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLog.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfcdca687c6d4574928e2741e1fb9287
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesImplTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3805f04aa43306c4590ee741451aefe3
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/ProfilerTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 108c2ba5daba841b79b8cc5db3dba1fb
+    m_importFrom: Packages/com.unity.assetgraph/Runtime/AssetBundleBuildMap.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 469319cb4146446b89f9e9646f5cf3d0
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 47c8f9980c2f63349a8fb20e6e1b5013
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/AddHashToBundleNameTaskTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d3b5d9a79a143a3bd3e0b1506282c2b
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/GUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e6c1855b74e6c4d2297a7cbe8be9db2b
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/LastImportedItemsTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ecebe0a6795bf4a00a89a1b2db87734d
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators/CreateMaterialFromTexture.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0b34c2b7df56043f28d5e525b89cb105
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Unity.AssetGraph.EditorTests.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5252304aa623387469db31285ab55959
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/d_History.Forward.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fa4c633b074b9764294948e525c07a1b
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingResourceLocators.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a521f5672f7fa4a80a23fb2124b2773a
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/OrgData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 850aa6537906d2342a70d728ad6e8245
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel/DetailsContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c5d768c319ef8949ae3121960b225fc
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/DetailsPanelSummaryAsset.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f72ac6a7a32304f2baf84ce520e0a2b6
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/IInstanceProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bf8251aa3d694f2459ee1fbb73cf9123
+    m_importFrom: Packages/com.unity.addressables/Editor/AddressableEditorInitialization.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 02902a547753c48fcbb45e39c3ccb955
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetsSettingsGroupEditorBuildMenu.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69448af7b92c7f342b298e06a37122aa
+    m_importFrom: Packages/com.unity.addressables/Editor/Unity.Addressables.Editor.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 48a13c66388e34e1fa54cce85530c3b4
+    m_importFrom: Packages/com.unity.assetgraph/Third Party Notices.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 03eaacf3cb3e642a3a137ead7d9debba
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node3@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c66ef31a34be3df45acc8590fd614dcb
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9fa130dc1a674f38a215c4f52e2b420
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/AsyncOperations/AsyncOperationBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 019dda5fbf4d3854eb49b455c17c0de6
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Data/EventDataPlayerSession.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 25cef95ed1a3d0a47bb7058b90931cd0
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/BinaryStorageBuffer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 753f9965abdd3f24eb42eafccaf7a286
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/DynamicResourceLocators.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cd98027e9703d4feead80e890f5e2fd7
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e32f647f6eec5dd458031b2ccab2880b
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/SceneManagerState.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0619aca0c5e2b4dc38311d8bdc157e99
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/Simulation/VirtualAssetBundleProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be36d66973700384fbeb7fc898581fbb
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetGroupInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4eb34d40a86f34e39b58f21bfa24fa14
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node_images_source.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 561dd5984fde32741a712b4a968324fd
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneWindowsIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a4383287c19544f4ebf11f0d92af3653
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/TestObjectWithSerializableField.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28a940f3bb234e34baec3af2b61b8d67
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel/DetailsSummaryView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: faa4c2d5ab226634bb3fe6dd91e50a67
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadScene.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c03bc07c7a3d844849931ab6ebeb4adf
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices/HttpHostingServiceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82c7396e127bdc14e8983693357610a3
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/DetailsPanelSummaryNavigableBundle.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f0364baebb057874782f9bd6e4dcfa78
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/AssetDatabaseProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1fd8a0466f984a08874b05c3243189f6
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/OperationsCacheTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eaa35269cca754e59b04f1d5b04e5c61
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__AssertUnwantedAssetsInBundleTest_TestAssetUnwantedAllowShouldFail.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cf769c7817ebfa842bedf81cae9f2f6c
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/PackedPlayModeBuildLogs.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 803b8b87581e2c546ba00dfeeafc29ca
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/BuildReportUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4c72184d3a723464ca46e7c2406ca704
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/CcdManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3ee6f25a9e02fee4197773346feb1015
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 77af4245676cdae4e90c350b07b947d0
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/ResourceProfilerWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9dec9370340da43409dd436c2cc60a62
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadAssetAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b72480bfff6144178f40ead87ac5a85
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/OrgDataTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 87f118cb270dc490e84ebea5a5283615
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/CcdFolder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00e1416746642a9419ba6700f4267349
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadSingle.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f3f18a7841f7dca47bee246dcd538b31
+    m_importFrom: Packages/com.unity.addressables/Runtime/IKeyEvaluator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a58aa8ea0dc1b47c3a51105ef2252237
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/AudioImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e80978168993489ea03c2ffbccaf928
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/LoaderBySearch.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3f9489010bc9cdc458c23db402d6b3fa
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/GlobalInitialization.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7ec70bdd63318fa4ea1601eeb3000ce8
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ResourcesTestUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 17f3afdeeb438464081ed4088648c676
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingReleaseInstance.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d65991d4bb3d75541bf06688c370ff05
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ContentCatalogTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c8e9fe359bd1fe94c8529447c3342a2a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingResolveInternalId.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 632c145638f685b4883fbd81884e496a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/CustomTestSchema.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2c38782eb8fd84ba1b42d3abaf4717a8
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceLocations
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aaa68dbe5d4e2b24281d446a29c84c78
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 970a95875c9b7474ba926b947e8cc477
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformAndroidIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4dff96b374bd7441c8ad7f91fc6a3591
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node1.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f7957320f633f4c71bc0d6f744410738
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V1/ConnectionData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb7760b9e5ac34accb86727dca327299
+    m_importFrom: Packages/com.unity.assetgraph/LICENSE.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 74f5fbf77d99c4e45bf6421e5cf0e4cc
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/MonoScriptBundleNaming.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 541f73e53f31a9c45aada1a7441da18a
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/CleanBundleCacheTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d07c590681843734482b565ad928be3e
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/Operations/ProviderOperationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d624c3bd70705446adc7ee473ceb159
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/AddHashToBundleNameTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8250daa78002140a48f305854f8e9972
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/FileOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1bacf5ce9a7eee4c934611ba77ab921
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/TreeViewNavigableItem.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c2a5303f46dbdc449288a5ca3566942
+    m_importFrom: Packages/com.unity.addressables/Runtime/Utility
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2f6c3fe4244bf1b4eb6ff845821aa417
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/CacheInitializationDataDrawer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 555da02c9c624644c9695f325ea6a22c
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/CheckResourcesDupeDependencies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82bbdcbf8b70eda4e80f931393924ac1
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DomainReloadTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eec4882d68a9346b3b5f8ecf1e38a534
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2/ConfigGraph.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c6842422df3f52c49bd039fb475426ac
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadAssetsAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8b36329ded81b4b449ae2de19c70eb59
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/MainPanelSummaryTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d6c922e734ba25649a6af8e03e27a324
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/BuildProfileSettingsEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 48d6c3468cb636c449f15b9361793735
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingGetDownloadSizeAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c99f06ff0dde241d1a363bbd8ef932a2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node4.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b5aaf4e4b41e6a447935d02bf76b2aa3
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetGroupSchemaTemplate.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6e4b11d3ae39f459483b122f50af55ee
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/Simulation/VirtualBundledAssetProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 026474f5e29544af185a526bd1aebdf6
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node4@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 88d21199f5d473f4db36845f2318f180
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/BuildScriptFastMode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae32c06838424447c9cfb208bc0b7aba
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/PrefabBuilders/IPrefabBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba3ec7deec18d144e848686e9d4e18bf
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 842157613adc2a74e91ad9ee1391ca27
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/EventListView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cda5ad9bd8be5214c853a418eeb6d268
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadContentCatalogAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e6f1bb79354d4d14a965de286d966d5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node6.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e098a01716164d41a666ccd8d2c1cf5
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/TestUtil
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f94d20840f3378647ba2c0da3686e517
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/CleanBundleCacheOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a5529cb00c9319488699e8367ff0f96
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformSwitchIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f79f3200638d94ef7887adb6e8516401
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LoadBySearchFilterTest_TestEmptySearchCondition.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 041ea21fa30a4a34fa6cfe55505b452c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildLayoutGenerationTaskTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb6c03f5afc23481cb01e7c813d06e48
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphBackground.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2532f117fdca14c628be19d001f7487b
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupBySizeTest_TestGroupByRuntimeMemorySize.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1487f5d688e4f94f828f879d599dbdc
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/GroupSchemas/PlayerDataGroupSchema.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be72e827636b84babac7fe6b7fc282f6
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Filters/FilterTypeUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 97211b0f482ed5c4f94f6efe397a40ca
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/BundlesContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9508f7aaece47b45a0d499d7c67a777
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetTestBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9fb0f68aa5e81c448815f0b79325a30f
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceLocations/ResourceLocationBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2bc0d9d4d7b8e478c831da74cdf06151
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/LineDraw.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e877031ea62d464aa7ab620ffe1a5ba
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/StyleSheets/Ribbon_dark.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9ac2e436791026547b840f87f876f4e7
+    m_importFrom: Packages/com.unity.addressables/Tests
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7649e3e161c83ce45aab9de9bd6c8625
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/ReportListItem.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9ba3c3f58d8248e5b038dc004496686
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28ea601a1b6074391b80b16eaef50a85
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/LoadBySearchFilterTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 38c7e0fdbf240784998304d4d11ed645
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetEntryTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6ff8a38d580a5e34c818334c22c6afef
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/MainToolbar.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: afc3569f912a446bc839b0acf18ac47c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node7@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dd340326674dc4c418bd6cf12845b4c7
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadWithReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d0b03a948ad545f691a9d4213bfe810
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/AssetLog/AssetProcessEventLogViewController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6d97546331657044a99aed2e45ee76a2
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AnalyzeRules/AnalyzeSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2fd90a1deed549a584e3a4b33bd7404
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressablesGUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2beb27d59eec84f3eaa90e2394236032
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GroupView/GroupListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4ff65a093e87f482b91a6ccf343a1f76
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2/ConnectionData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82e826e5c9181f2449a34ca76c3837e2
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/AtlasSpriteProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a073337e5a6474ad2bc1d344d9ce8211
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ConnectionGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e054c3274b8fb154c876b5be5db09359
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AnalyzeRules/CheckSceneDupeDependenciesTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6927363d65dcda940b12e68308e980bc
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/GroupSchemaTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1f2eff97e91ec624b8d35cecfb1ccf38
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildScriptPackedTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c8cf226ae39e82446b1bb827024f582c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util/ResourceManagerConfig.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bbc66e9c19bb4284686b4dbce7530ccf
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/BuiltinSceneCacheTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1cdcbf100409f3d4aa907f8b5caf6b72
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadLocation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1b61a52d425c4e0f990ee2abd92efb46
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/EventGraphListViewTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 569f15755d5d88e48a93ae6b28dd62f8
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphLayerBackground.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b25a542caf7ff40f58e6cf517affcf47
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V1
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 97ad6dc3d3427a04082f57c44933e71c
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/AddExceptionHandler.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4ac2fef2444fc40e1be92d0423a6587a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/AsynchronousLoading.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 07dd3f1d43b528f4ea00ed7dcb84972d
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingDownloadDependenciesAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 521b70bc1490841fda41310e2da01fa9
+    m_importFrom: Packages/com.unity.assetgraph/Runtime/Unity.AssetGraph.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8c093efecdee27545b682edf299506ad
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/DrillableListViewItem.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 11cd75004d5b84ef08d52cd8912277d3
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/BatchBuildConfig.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 776e8b00aee724f69a02402947a3967f
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/FileRegistry.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5cca494f74e014bfb970b88e4c1500e0
+    m_importFrom: Packages/com.unity.assetgraph/Editor/SettingTemplate
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1970fb55c77154021a4cd5e4a72d89eb
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Label.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4824831e124564254aea49f66a81cbad
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/AssetReferenceUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bf5e6ef0e57ead045be2e03ae1ec38b0
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AddressablesIntegrationTestsImpl.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 17371403cb6db7b4489e8fcd43b02b56
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/PreloadWithProgress.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6468a66b467b3f440929865a8ad85665
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0add36b05968048499c42e29f87bf6ae
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f409833c61db2b9428d2f2bcf4dbb0a1
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/ResourceLocationData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 49f93c268e0343869a5a30defb8e5d51
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/CcdBuildEvents.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 61985980b88404b40abb13be18b78b3b
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/TestObject2.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 377dcfe91a2b68742aedc28e60d58544
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneLinux64Icon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ab14a367225f0fc4581b91e784c7f55a
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/InspectorPane.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a51b3a53966dc984e9859a169333c8ac
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/BatchBuild.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f4afbfedc128456c8531368b170d036
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Exception/AssetGraphException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b752dee94740a4464a8c88377c070679
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerDetailsView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f6179ca1ceddb724ea1c3b515e04adbe
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/MainToolbarButtonsLight.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c63d12b8197e0466bb01427f0f4d999b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node_images_source@2x.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 73fc848d55dc74aaa8039af14e99f8b6
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/CreatePrefabFromGroupTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0fc8c72284fb9414ca3384e659772838
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/AddressableBuildTaskTestBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8e58c37b4da2490c9d0a789a70df844
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/LabelWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 902a23aa7fb810b4c90bd35c50e66fde
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/ResourceLocationMap.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d00d589513e244e05b12dce92ddf25e4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyFilter.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fb7e7faa926f9db428cf76838c871ed5
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/StyleSheets/Ribbon.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d21fe059b6ed81429427b236f320d24
+    m_importFrom: Packages/com.unity.addressables/Runtime
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9847c86f230bc2e4d8f60483d345704c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/SceneTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4533d6b9f915a16429e5a3143d2f7a1b
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/ProjectConfigData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69eef738ab4fa5d4c82e3f424ea1a5cd
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformPS4Icon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 08d6d38651abd624b9c945a1ed5d80bb
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingAddResourceLocator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5c75fed7a116640d1b5c78c11883ff89
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/AssertUnwantedAssetsInBundle.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7a61cdf230c0a4ddba68a0a707d58525
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/ExtractSharedAssets.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7e74ddcb4e22c4cfc94b454f0aeb1573
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node0.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d3994cd1747d38846bb962901129f8db
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadWithAddress.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cfc18942d8f87f147a241b9de540a2a1
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/DynamicResourceLocationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba3466a966a5498ba5e322d82549f7ad
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/TreeColumnNames.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a3b28cc6d2f5b444af3331b13911334
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/KeyDataStore.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 78ce924c1536e4fb88d91fff535a384b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node8@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 053ca114086a74fd6842a2f9944a47cc
+    m_importFrom: Packages/com.unity.addressables/Editor/AssemblyInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f6ca99e013fe6c49bb6b98f8ec1897b
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/Operations/BaseOperationBehaviorTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: df472e963db9c4e008037836a73f8472
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/BuildAssetBundleTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8a5c9b2d5cfd7b94caca42edabdf243f
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformiOSIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 71c9532ec33dc0b4dbe723ee65d372a1
+    m_importFrom: Packages/com.unity.addressables/Runtime/Services
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c43adc6464e9d348b56ac4906fb5df0
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingRelease.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fde27ed4473003b4ba91281c9228e9f8
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadWithTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0952ae1d131b4a4dbcdd7010c2d69aa
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLogErrorFormat.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04bd0f46978d2c345acddd9421f9db9e
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/Ribbon.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f2308a41f0f71948bf45196f5b2d8ef
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceLocations/ILocationSizeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d507a227bf0d44fe1a93735de25c9956
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/GroupByFilePathTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ff364f45836f84793bb74231db2d1dee
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__SplitByFilterTest_TestCombinedFilter.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b19f99025db4a1e44a095aa3f1284c54
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/GenerateLocationListsTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f4d7d9f74fa394649b729102066b4b96
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetSettingsLocatorTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2dd2619d56bf0674e930cbfd1f598197
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/AddressablesRuntimeProperties.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c73685de6a2030a48a67d78ba454753c
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/LabeledLabel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ee57090837beb6444873f91d15f6ba37
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReportListView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e6c1d0b0ab4d44f42a99963de99d60ba
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/Initialization/AddrRuntimePropertiesTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89041da145f23a24d9513748204709d0
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/IBuildReportConsumer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6ab59bdae5595f345b4b7357f4cade78
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/DisableBuildWarnings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b4de33f65ec448ec9085f9c0bf149db
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4d343c92fcbf4c34eae9cee8dc8107b7
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneOSXIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 566514eeee40fbb4095bb20d9ca5ef1b
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformLuminIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c5676580c9e682d4da654a6c5440b917
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/DynamicContentUpdateTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0069ff676acf4c95a1d53bf8f9f21a44
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/ProfileTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 66224f1e0c916e74abdbed7be1f2ca7d
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/SummaryTabDark.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8836c99e56667417bb066cd94bd2a9cb
+    m_importFrom: Packages/com.unity.assetgraph/README.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c09a39d41a474a4a886225f2513ed5e
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ContentUpdateTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81b3d18ee905544b988d58249996f11f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators/DuplicateRefererenceAsset.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 715a1813af334a6db7f3c47daec400af
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerDetailsDataInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0be87be5fff9bed408703777e5c234e7
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/LoadSynchronously.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 05a0ed70356185a4ba7f840a0ab2afe1
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/TestReflectionHelpers.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3cf68bc830910e1479a05521a6b0ba9f
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/VisualElementsWrapper.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 55796f9e6ac6b4b938413481d8242df5
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/AssetReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 88203b600d2442fda5af745f14b1322c
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/ContentSearch.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6fcad11926dfda34fbc9e1054306a774
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/HelpDisplay.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a1c8da71d6fa024fb491ef337779cf3
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/RibbonButton.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 351af98fa765ba1498bcad1e9100d610
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformPS4Icon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6d887369ddee445fcb949ccffacd6c26
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/ErrorTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 32e54ebfc1aeee146849c3fcaba75c46
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Data
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1052cd47d54d3c941894699bcb6eb7f6
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/InstantiateReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4c30a288c553aa7488774857f37eee83
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerVirtualModeTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d08b6432a8ecc45e9919f60b13177955
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LoadBySearchFilterTest_TestSearchFilterWithTypeAndName.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8da8f70d2b1f92d4dbb383119d26f656
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingPlayerBuildDataPath.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ee4bc21567f434b598a3c96ba4946372
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/AssetReferenceDatabase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 764d4b52473c57c43a471351bb59abe1
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformWebGLIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5bda7698faa434f0f954bdae3c7b06b9
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ProfileGroupTypeTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2a89a69dd38ea4743bd061070386b3cd
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupByFilePathTest_TestGroupByRegex.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5cc79dcfe4c99ee4c8baf9bf0e5c8a40
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Data/EventDataSet.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c72e9896ca732448296aaec689e29fcf
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Modifiers/IModifier.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c50baa6dc4a739842acba729ee9998a5
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: df92c48909f708647b98ae363e7618d8
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/TestUtil/MockProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9957afe4f6df4fba8f8e329a47b30cb
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/BuildTargetUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a04deffd16d96345b57337ce2b4d075
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetSettingsTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c349d15a2c35fcb47be33f570820ac4b
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAnalyticsTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c257eab87736446e9a206d1a2040912f
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__ErrorTest_TestError.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5869e219e2105b8409e3408d8910f90e
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/DrillableListItemStyle.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 98f6aad0f00cc44b6947117629fa55bd
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/MirrorDirectoryTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be94deed5ffe14cf18fd7d8fdd00a3d7
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__CreatePrefabFromGroupTest_TestReplaceWithIncomingGameObject.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e135f99d5c3f044e4aba84ddbed0d30b
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/ISceneProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2b2e14ba7b808458585452ae88c62b95
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AddressableAssetGroupTemplateInspector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0a15f049c10fa744ca827575ffac1c0d
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressablesBuildScriptHooks.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2fa9998af31eaba4d86afdc900c345ec
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetGroupSchemaSet.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f70c9363a9fe92448d66c32c55352e9
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneLinux64Icon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9834b3849844b497cbdd2afdd4701e4a
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/HostingServicesWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f28a97eb9f6b84cc2b6879387333e1c7
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Importers/ModelImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82f81cb4192dc4e1d9714dd03ea84ad1
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/JSONGraphUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d4fc965925d484439a7a0bebb3518d8
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadResourceLocationsAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 23523559295aa9e479993322ed51f4b7
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be2d0a6950d464b7e9569db65ea823aa
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/ExtractSharedAssetsTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 322ae10a4b62a437c901e1f23093ac3a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices/AbstractTestHostingService.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 72ed3432ab4644eb59375981e4a7fe59
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Filters
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ed3855e42a19348ebb7d746a9074749f
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupBySizeTest_TestFreezeGroupOnBuild.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0a6d54cc4a4cbec4db6e4c14b3f92c22
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/BuildReportWindowTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 25044ebf09b894f54b934a703a5114a1
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/ProfileDataSourceSettingsTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 96cc958f02550384ab2d0e1964ebb8ff
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/LabelsContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b5c3475f04d410a47ade712e307b9d75
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/ContentView/DuplicatedAssetsContentView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6456c5ae7c7004aef90544e60bdb58e6
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/DownloadError.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 526ef7ee884d8544487ab247e82e6371
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/AddressableIconNames.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7ba37647c6bae7846b28d56e45adee11
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetsWindowTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3beb0fb679dee7f4ca526692b1702fc4
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformSwitchIcon@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a6e1ac52851690b48bdf019059b98207
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerLegacyModeTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 66e8376ba5f093047bc9ab5d3d61430b
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/PlatformStandaloneWindowsIcon.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a1337df6f2e1467499697f89b4b7393
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Filters/FilterByNameAndType.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c772a1b1372494d358778b070fa6adc8
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Runtime
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dd13484018b914e10a97ed9e5e9d4016
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/CcdManagedData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6f6c277bb5d2a164e8c95a7f0754c0f6
+    m_importFrom: Packages/com.unity.addressables/CHANGELOG.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: acf11b360a699d34383fb6a9d78eed8f
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_LightTheme@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3a9619d3ea7c4cb4ea630f41c2b2ee80
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/SummaryTab.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3ab1bcbb000bd41018384e565c288604
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node5.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0cc816be7de984cd8ba3ef6b19370a30
+    m_importFrom: Packages/com.unity.addressables/Runtime/Utility/ResourceManagerEventCollector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5367ed2f72994b55af0964b29a5134a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node7.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 63ad34409be54418f9ef3d9a98023f6b
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupBySizeTest_TestGroupNameFormat.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6356449d0e7fa7647972b14e67e3273b
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/DetailsPanel/DetailsContents.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 009ae346a3f1b42eb864a151c39805d3
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node6@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a0b38e81794b245a7a71fc9c19242c85
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/HostingServicesAddServiceWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9bc7d9a184fb741d08099d7530a0750e
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/ExportAsUnityPackage.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 02e5822d3f4d04f41b5e9ffc9c85e280
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/SystemDataUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 722d9658f4892ba47a7a9db5fdf152d6
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/SceneProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b599dbeafb09d4db69110c404ab9552f
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/HostingServices/HostingServiceInterfaceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 974a84a8c55ad4a0187379f800b8fe09
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Util
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 06afb4c0c7e547af92b449eb353c0cb8
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetEntryTreeViewTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ccf17da579ac24092acc209bdecb69f8
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89eb4003a9db2ee46a7a8549160bf68a
+    m_importFrom: Packages/com.unity.addressables/LICENSE.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 46e082cff6afc4be8815e6b86e62dc45
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Grouping.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5e7d7b14b790b4a679c521d3123744c2
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/GroupByFileTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 94ef737d5b23784419edd995a21c46ac
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/CustomBuildScript.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: aba1c7432ab2e47459da27d4f1abeb74
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Addressables
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1b50529888cb4f042b2f830c893efc9c
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerViewController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b29514f1c114d144094eebc93ad52783
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/ProfileValueReferenceDrawer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 85f61fd61986b405dbd5bc38da39f73d
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/InspectorPane.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 66c2b738157840b43a4f923dc575193b
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/FileNoIcon@3x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e37e335925e27435baa014373861de89
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/AssetLog
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4043dad9a38a8409a899553f3c5cd7ad
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ProjectSettings
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e8172907ebad1ec48b261c4e12a371a3
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2caf4b90ea25a724b8db4ffb88123a60
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AssetLabelReferenceDrawer.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a8ec8c8ac2894511a48d2bc2fe4e3a08
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/DetailsViewDark.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8dd2517b608b4a7ea9098574b4e6969
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node1.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b941be2c696694ebc89e1f4a0fedc4f8
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__ErrorTest_TestNoError.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6559e9563688d0040a7f2ba6e247bf90
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ad20dc0f550e9ca4997c74ae771f6042
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/BuildLauncher.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 06515ccb4c8b3e446bcf0d6fce5e9cd1
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ad5fa919de6248649b4c095f3809802
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetGroupTemplateInterface.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3cc4c61333704573a82d3ab31a21ba9
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupByFilePathTest_TestSubgrouping.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cc9d051a7aa1d4dbbbe99c67526af874
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/AssetGenerators/IAssetGenerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb35bed7fc253894fa5526da2f1e6605
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/GUIElements/SearchStringFilters.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2a1c92f384e631d4c95ab63b4d466677
+    m_importFrom: Packages/com.unity.addressables/Editor/Icons/white_help@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fc7088bd5a5634d5eb4b6c84bc95bcbf
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LoadFromDirectoryTest_TestIgnoreSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ce553c06e42d7431d862637ca1e18e57
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 14eabbd60aeb052409b51db02db54c84
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65b714b6377cb9c45a6edbc16f1f3092
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphDefinition.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9464586463c434f4a9ca322dc0df1350
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node2@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9db3cbcec3734a2498a530fa229403e
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/Layout/BuildLayoutSummary.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ba2c99f886e2c41d792d3a0c436f6bd7
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerModule.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09bd7246e12c44caeb1c3e4dc76fbd68
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/NodeBuildContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 36e2ba320a6ae3e4596bd1fe59b4fe21
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/ContentUpdateScript.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7136d73e8820d4135bcd6720bf5f3721
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5fa5a4d85cee44cc3a050e131b9b6098
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node3@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b54995fa67e2d6046bbbb9f05772f43b
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/ReportsListPanel.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 403f9a7a077a74263bab6b89198eaf4c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node0@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 327cf429aa28d4cd29d4b1ac70fc99e0
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/ExecuteResultTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2f2c4a782f59347fabf45af3206d679d
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LastImportedItemsTest_TestLastImportedItems.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c6632daa352f6846a162383f7a00fe7
+    m_importFrom: Packages/com.unity.addressables/Editor/GUI/AnalyzeRuleGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6b4a4e229baaa2544a4d681cc0dc5dea
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetEntry.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6f8d4698d81ba4878b54b15cff6f852a
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ProjectSettings/ExecutionOrderSettingsTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 839c3fb2351346debc772669dced51e2
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/StyleSheets/DetailsViewLight.uss
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6719223fb1e7d804091db79ce4200b50
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AnalyzeRules/CheckBundleDupeDependencyTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6294567ae0241e540a0423a0515d287d
+    m_importFrom: Packages/com.unity.addressables/Runtime/Initialization/UpdateCatalogsOperation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 962906719cf3dae4f8b815dcc25b22b5
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceProviders
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9276505b1c89f4fd7ba7e77f9b12c6ad
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LoadFromDirectoryTest_TestLoadAsset.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c988d689398659d4789c4677ea64b373
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/SummaryRowBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be312e4110688470990b1596df3dfa61
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Error.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2445fd6934ad4e88a4dbd7c02db6940
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/Imported.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c4f4788f869d62d4ea301e8340a9b12b
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/TestStub.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ed27888e1684140fe8f6cb05957e5b6b
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node3.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 732aa8bf67ed2de438b3f2f56850c43e
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilderInterfaces.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 69303074fc8049c794e80a49d142e38d
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/EventDataPlayerSessionTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c03100996df84ff1a8e32ffca7213a4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/GraphCollectionExecuteTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9dafe60ff4149624880b04d0cea88719
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/BuildPipelineTasks/ExtractDataTask.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f006d9a9c7507460d9ab6f36cbdb7794
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetGraphPostprocessor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 08e15d16f0070d0429a6ec852ac78abe
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e72f91eb00673438dbda9a3af311292a
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__SplitByFilterTest_TestFilterByName.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e49dad816ceeeb94386b907d5f361a0d
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Diagnostics/SegmentIteration.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a9b2fb219b0a847f6a705de8223b87df
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Utility/FileUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8f7ecdf2556ad4d3a820aba90522fab4
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/on_node7@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28e27e70c0f8cee45a62f86887957a0f
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/GenerateLocationListsTaskTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 07689e8f3a2194ffeb25946bde9b4f46
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/ObjectReferenceBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d79503fa30e4e47f7a80231b74f76eab
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/TreeViewPane.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 22e49408c617c404480396d74c837024
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/JSONAssetProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1d1d33334b51724b9bc4457a3ebd9ee
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/Unity.ResourceManager.Tests.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e449fe7932420f940adb4c9b75596bd2
+    m_importFrom: Packages/com.unity.addressables/Editor/Build
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2df9ac6a7a23fae4291c4897bc63e732
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/UXML/MissingReport.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 804b883d1ff6a3941b67819909b10b73
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_RightPanel_DarkTheme@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9c9765ad9de06ee4193e087e7732d756
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/AssetBundleProviderTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f0c774e7dbab37641808f75bcc438e4a
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Unity.Addressables.Editor.Tests.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0cbdebf3ba7c84c42a15f1cb8c47c14e
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/AddressableAssetBuildSettings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0d9d70fb62e8164d98b6567cf268d5c
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceLocators/IResourceLocator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2ab1c7411bf1a49c28024f09d219bf1d
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/OverwriteImportSettingTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a5b60c4c9c31a48de997f40e86fce8dd
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node0@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 346bda70af48240ecbace0e785adc937
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ConnectionGUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7b099b49d522d1541bbf6ba655430a02
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/Graph/GraphLayerBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 536993f12b814234a8f1d38fa0a1f35c
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/Unity.Addressables.Runtime.Tests.asmdef
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9c2125236cf11d4a98cd25ea3214ad4
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/AddressableAssetSettingsLocator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: de4318cbbab37fa40bc08ac8c2f51a9b
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/ResourceManager/ResourceManagerBaseTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3e28d3bd17b418141b01b3d1f7cfd2c2
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/BuildReport
+      Resources/Icons/Button_LeftPanel_DarkTheme@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a9f0dbc38109742b8b169ab66e8172d2
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 54000781df714fc4da1e646cae7e534f
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Data/EventDataStream.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 75cd73e70e37347d6b587081860242c8
+    m_importFrom: Packages/com.unity.assetgraph/Editor/Integration
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4afdd37c029df5643ad1e16511ae0987
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLoadSceneAsync.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a286e4526d8a69d4cb47c5d75f5acc83
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/BundledAssetProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82a0f18c397f74c78afb86c98d2f8694
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/NodeGUIEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d12d000d99808e140bb7ec633895cf09
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Data/EventDataPlayerSessionCollection.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4b51c3dc205df425bb581cfc489b2380
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node1@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 875335d887d78ba45af8467d0c5f9922
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingLogError.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f2454976b5ed4e628d9e910951d08d7
+    m_importFrom: Packages/com.unity.assetgraph/Editor/ScriptTemplate/MyNode.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09b260528be79b74ab75d43b23001eab
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/DiagnosticEventCollector.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8034c807692d4dc8975b8b0df202123
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/GraphicResources/NodeImage/node5@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a5ead37e5b8764940b99748a48ed48a6
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/GUI/GraphColors.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fc794266b6cadee45af8b7d164281fcd
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/Utility/TreeBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b45ce3caafd734a08b4ecc1f882ee67c
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/BatchBuild/GraphCollectionTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb0e4994b34add1409fd8ccaf4a82de5
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DataBuilders/BuildScriptVirtualMode.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1725dd748a705450ea972f3fe0826119
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Node/Buitin/GroupingByFile.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7dc6ecd1c26fdf7479e71472994d72db
+    m_importFrom: Packages/com.unity.addressables/Runtime/AssetLabelReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7ba9fc75a0048b0469b01c6cf75f65e4
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingBuildPath.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04051f360312e3547be05554223ba464
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/SyncAddressableTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 353e24853179e47bf9ebb9de6c42e428
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/ResourceProviders/ResourceProviderBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d0852653cb1494d2babfabf7af41c7c7
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__GroupByFileTest_TestGroupByFile.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 441d6ab2de7dd3948b7b50882e4370e7
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/Initialization/FastModeInitializationTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8d9a5f17c54584a67b7fe58665965f15
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetProcessEventRecord.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5da08927eb8a84276b34742adde1b11f
+    m_importFrom: Packages/com.unity.assetgraph/Editor/GUI/ProjectSettings/AssetBundleSettingsTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3331e5d5506b4b59975f5b7aee249b67
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/Build/BuildMenuTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8683601388ff6b4bb7d1f1a52ee6108
+    m_importFrom: Packages/com.unity.addressables/Editor/Build/DirectoryUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0ea2465c600278f4db3fdb6b76ee06a9
+    m_importFrom: Packages/com.unity.addressables/Tests/Runtime/RuntimePlatformMappingServiceTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4e32e6a16360e4be9ad309cb2d977563
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__LoadFromDirectoryTest_TestDirectoryNotExist.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c2680c6a4bae5a14ba54dc55ec1852d7
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/CustomDataBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cef69ad46d3a2a54aa5198dad625fe82
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingInstanceProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2ba48f0005dc45778cbd15a7e1b92f6
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Core/AssetPostprocessorContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9bc9e735871e9496e9ff53c223919bb1
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/Graphs/__hidden__AssertUnwantedAssetsInBundleTest_TestAssetUnwantedDisallowShouldFail.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 151162d7cf38afb499fff9e970102f74
+    m_importFrom: Packages/com.unity.addressables/Editor/BuildReportVisualizer/UIToolKitAssets/UXML/DetailsPanelSummaryBundle.uxml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b842ab94dae39f3459a2159fb7ef9b73
+    m_importFrom: Packages/com.unity.addressables/Editor/Settings/GroupSchemas
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 45ba41b6997d480b812819c1515522fa
+    m_importFrom: Packages/com.unity.addressables/Editor/Diagnostics/Profiler/AddressablesProfilerDetailsTreeView.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d165a767fad23a54d963742efdf90740
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/DocExampleCode/ScriptReference/UsingDownloadDependencies.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e92b488a6e4e44b0ba8022885f55f087
+    m_importFrom: Packages/com.unity.assetgraph/Editor/System/Model/V2/NodeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae63daeda69574396afc0a857279c5cf
+    m_importFrom: Packages/com.unity.assetgraph/Runtime
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 51616e18d891a48d1b0474a1defc1a91
+    m_importFrom: Packages/com.unity.assetgraph/Tests/Editor/ConfigureBundleFromGroupTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8262b6bbc428e3147b18b7f7f4527359
+    m_importFrom: Packages/com.unity.addressables/Runtime/ResourceManager/Diagnostics/DiagnosticEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb04252b53f48b349a901615af6a84fe
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AddressableAssetsBundleBuildParametersTests.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cf99c4b78a1e287498efd1df562f6347
+    m_importFrom: Packages/com.unity.addressables/Tests/Editor/AnalyzeRules
+    m_exportTo: 
+    m_variantName: 
+  m_version: 2
