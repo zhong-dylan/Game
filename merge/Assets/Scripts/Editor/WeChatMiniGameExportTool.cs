@@ -21,7 +21,10 @@ public static class WeChatMiniGameExportTool
     private const string ConvertOnlyMenuPath = "Tools/WeChat Mini Game/Convert Only";
     private const string RevealExportDirMenuPath = "Tools/WeChat Mini Game/Open Export Folder";
     private const string OpenOfficialWindowMenuPath = "Tools/WeChat Mini Game/Open Official Convert Window";
-    private const string OpenUploaderMenuPath = "Tools/WeChat Mini Game/Open Upload Panel";    private static readonly ExportConfig Config = new ExportConfig
+    private const string OpenUploaderMenuPath = "Tools/WeChat Mini Game/Open Upload Panel";
+    private const string OpenLocalConfigMenuPath = "Tools/WeChat Mini Game/Open Local Upload Config";
+    private const string LocalConfigPath = "UserSettings/WeChatMiniGameExportLocalConfig.json";
+    private static readonly ExportConfig Config = new ExportConfig
     {
         // Root export directory consumed by the WeChat SDK converter.
         ExportDirectory = "Build/WeChatMiniGame",
@@ -58,13 +61,7 @@ public static class WeChatMiniGameExportTool
         // Upload exported webgl folder to TOS after a successful export.
         AutoUploadWebGL = true,
         // Relative object prefix inside the bucket.
-        UploadObjectPrefix = "merge_farm/wx/webgl",
-        // Fill these locally if you insist on code-based credentials. Do not commit real values.
-        TosAccessKey = "AKLTMmY5MjJjZWQ4YjRmNDI1MTgyMjhjNDhmZjQ1ZWE2MmE",
-        TosSecretKey = "TVRKaU5tRTRPREk0TVRObU5EUmlNR0l4Wmprd05HTm1PREE1TXpaak5UYw==",
-        TosEndpoint = "https://tos-cn-beijing.volces.com",
-        TosRegion = "cn-beijing",
-        TosBucket = "quzizi-2dgame-res"
+        UploadObjectPrefix = "merge_farm/wx/webgl"
     };
 
     [MenuItem(ExportMenuPath)]
@@ -124,6 +121,13 @@ public static class WeChatMiniGameExportTool
         }
 
         EditorUtility.DisplayDialog("WeChat Mini Game", "WeChat upload panel was not found.", "OK");
+    }
+
+    [MenuItem(OpenLocalConfigMenuPath)]
+    private static void OpenLocalConfig()
+    {
+        EnsureLocalConfigFile();
+        EditorUtility.RevealInFinder(Path.GetFullPath(LocalConfigPath));
     }
 
     private static void RunExport(bool buildWebGL)
@@ -322,25 +326,29 @@ public static class WeChatMiniGameExportTool
             return;
         }
 
-        string accessKey = Config.TosAccessKey;
-        string secretKey = Config.TosSecretKey;
-        string endpoint = Config.TosEndpoint;
-        string region = Config.TosRegion;
-        string bucket = Config.TosBucket;
-        if (string.IsNullOrEmpty(accessKey) ||
-            string.IsNullOrEmpty(secretKey) ||
-            string.IsNullOrEmpty(endpoint) ||
-            string.IsNullOrEmpty(region) ||
-            string.IsNullOrEmpty(bucket))
+        LocalUploadConfig localConfig = LoadLocalUploadConfig();
+        if (localConfig == null ||
+            string.IsNullOrEmpty(localConfig.TosAccessKey) ||
+            string.IsNullOrEmpty(localConfig.TosSecretKey) ||
+            string.IsNullOrEmpty(localConfig.TosEndpoint) ||
+            string.IsNullOrEmpty(localConfig.TosRegion) ||
+            string.IsNullOrEmpty(localConfig.TosBucket))
         {
             Debug.LogError(
-                "[WeChatMiniGameExportTool] Upload skipped: missing TOS code config values in WeChatMiniGameExportTool.Config.");
+                $"[WeChatMiniGameExportTool] Upload skipped: missing local upload config values. Open and fill: {LocalConfigPath}");
             return;
         }
 
         try
         {
-            UploadDirectoryToTos(webglDirectory, bucket, Config.UploadObjectPrefix, endpoint, region, accessKey, secretKey);
+            UploadDirectoryToTos(
+                webglDirectory,
+                localConfig.TosBucket,
+                Config.UploadObjectPrefix,
+                localConfig.TosEndpoint,
+                localConfig.TosRegion,
+                localConfig.TosAccessKey,
+                localConfig.TosSecretKey);
         }
         catch (Exception e)
         {
@@ -413,6 +421,49 @@ public static class WeChatMiniGameExportTool
     private static string NormalizePath(string path)
     {
         return string.IsNullOrEmpty(path) ? string.Empty : path.Replace('\\', '/');
+    }
+
+    private static LocalUploadConfig LoadLocalUploadConfig()
+    {
+        EnsureLocalConfigFile();
+        if (!File.Exists(LocalConfigPath))
+        {
+            return null;
+        }
+
+        string json = File.ReadAllText(LocalConfigPath);
+        if (string.IsNullOrEmpty(json))
+        {
+            return null;
+        }
+
+        return JsonUtility.FromJson<LocalUploadConfig>(json);
+    }
+
+    private static void EnsureLocalConfigFile()
+    {
+        string fullPath = Path.GetFullPath(LocalConfigPath);
+        string directory = Path.GetDirectoryName(fullPath);
+        if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
+        if (File.Exists(fullPath))
+        {
+            return;
+        }
+
+        LocalUploadConfig template = new LocalUploadConfig
+        {
+            TosAccessKey = "",
+            TosSecretKey = "",
+            TosEndpoint = "https://tos-cn-beijing.volces.com",
+            TosRegion = "cn-beijing",
+            TosBucket = ""
+        };
+        string json = JsonUtility.ToJson(template, true);
+        File.WriteAllText(fullPath, json);
     }
 
     private static object GetMemberValue(object target, string memberName)
@@ -600,7 +651,11 @@ public static class WeChatMiniGameExportTool
         public bool AutoUploadWebGL;
         // Object key prefix inside the configured bucket.
         public string UploadObjectPrefix;
-        // Code-based TOS credentials and endpoint settings.
+    }
+
+    [Serializable]
+    private class LocalUploadConfig
+    {
         public string TosAccessKey;
         public string TosSecretKey;
         public string TosEndpoint;
