@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Threading;
 using UnityEditor;
 using UnityEngine;
 
@@ -24,6 +25,11 @@ public static class WeChatMiniGameExportTool
     private const string OpenUploaderMenuPath = "Tools/WeChat Mini Game/Open Upload Panel";
     private const string OpenLocalConfigMenuPath = "Tools/WeChat Mini Game/Open Local Upload Config";
     private const string LocalConfigPath = "UserSettings/WeChatMiniGameExportLocalConfig.json";
+    private const int TosConnectionTimeoutMs = 15000;
+    private const int TosRequestTimeoutMs = 120000;
+    private const int TosSocketTimeoutMs = 120000;
+    private const int TosMaxConnections = 8;
+    private const int TosUploadIntervalMs = 300;
     private static readonly ExportConfig Config = new ExportConfig
     {
         // Root export directory consumed by the WeChat SDK converter.
@@ -373,10 +379,14 @@ public static class WeChatMiniGameExportTool
             return;
         }
 
-        builder = InvokeInstanceMethod(builder, "SetAk", accessKey);
-        builder = InvokeInstanceMethod(builder, "SetSk", secretKey);
-        builder = InvokeInstanceMethod(builder, "SetRegion", region);
-        builder = InvokeInstanceMethod(builder, "SetEndpoint", endpoint);
+        builder = InvokeFluentInstanceMethod(builder, "SetAk", accessKey);
+        builder = InvokeFluentInstanceMethod(builder, "SetSk", secretKey);
+        builder = InvokeFluentInstanceMethod(builder, "SetRegion", region);
+        builder = InvokeFluentInstanceMethod(builder, "SetEndpoint", endpoint);
+        builder = InvokeFluentInstanceMethod(builder, "SetConnectionTimeout", TosConnectionTimeoutMs);
+        builder = InvokeFluentInstanceMethod(builder, "SetRequestTimeout", TosRequestTimeoutMs);
+        builder = InvokeFluentInstanceMethod(builder, "SetSocketTimeout", TosSocketTimeoutMs);
+        builder = InvokeFluentInstanceMethod(builder, "SetMaxConnections", TosMaxConnections);
         object client = InvokeInstanceMethod(builder, "Build");
         if (client == null)
         {
@@ -396,19 +406,64 @@ public static class WeChatMiniGameExportTool
             uploadFiles.Add(NormalizePath(files[i]));
         }
 
-        for (int i = 0; i < uploadFiles.Count; i++)
+        if (uploadFiles.Count == 0)
         {
-            string filePath = uploadFiles[i];
-            string relativePath = NormalizePath(filePath.Substring(NormalizePath(localDirectory).Length)).TrimStart('/');
-            string objectKey = NormalizePath($"{objectPrefix}/{relativePath}");
-            object putInput = Activator.CreateInstance(putInputType);
-            SetMemberValue(putInput, "Bucket", bucket);
-            SetMemberValue(putInput, "Key", objectKey);
-            SetMemberValue(putInput, "FilePath", filePath);
-            InvokeInstanceMethod(client, "PutObjectFromFile", putInput);
-            Debug.Log($"[WeChatMiniGameExportTool] Uploaded: {objectKey}");
+            DisposeIfNeeded(client);
+            Debug.Log("[WeChatMiniGameExportTool] Upload skipped: no files matched the upload rules.");
+            return;
         }
-        Log.Debug("[WeChatMiniGameExportTool] Upload completed.", Color.green);
+
+        string normalizedLocalDirectory = NormalizePath(localDirectory).TrimEnd('/');
+
+        try
+        {
+            for (int i = 0; i < uploadFiles.Count; i++)
+            {
+                string filePath = uploadFiles[i];
+                string relativePath = NormalizePath(filePath.Substring(normalizedLocalDirectory.Length)).TrimStart('/');
+                string objectKey = NormalizePath($"{objectPrefix}/{relativePath}");
+
+                EditorUtility.DisplayProgressBar(
+                    "Upload To TOS",
+                    $"Uploading {i + 1}/{uploadFiles.Count}\n{relativePath}",
+                    (float)(i + 1) / uploadFiles.Count);
+
+                object putInput = Activator.CreateInstance(putInputType);
+                SetMemberValue(putInput, "Bucket", bucket);
+                SetMemberValue(putInput, "Key", objectKey);
+                SetMemberValue(putInput, "FilePath", filePath);
+                try
+                {
+                    InvokeInstanceMethod(client, "PutObjectFromFile", putInput);
+                }
+                catch (Exception e)
+                {
+                    throw new InvalidOperationException(
+                        $"Upload failed for file '{filePath}' -> '{objectKey}' ({i + 1}/{uploadFiles.Count}).",
+                        e);
+                }
+
+                Debug.Log($"[WeChatMiniGameExportTool] Uploaded ({i + 1}/{uploadFiles.Count}): {objectKey}");
+
+                if (i < uploadFiles.Count - 1 && TosUploadIntervalMs > 0)
+                {
+                    Thread.Sleep(TosUploadIntervalMs);
+                }
+            }
+
+            Log.Debug("[WeChatMiniGameExportTool] Upload completed.", Color.green);
+        }
+        catch (Exception e)
+        {
+            throw new InvalidOperationException(
+                $"TOS upload failed while uploading directory '{localDirectory}'. See inner exception for the failing request.",
+                e);
+        }
+        finally
+        {
+            EditorUtility.ClearProgressBar();
+            DisposeIfNeeded(client);
+        }
     }
 
     private static bool ShouldUploadFile(string filePath)
@@ -528,6 +583,24 @@ public static class WeChatMiniGameExportTool
 
     private static object InvokeInstanceMethod(object target, string methodName, params object[] args)
     {
+        MethodInfo method = FindCompatibleMethod(target, methodName, args);
+        return method == null ? null : method.Invoke(target, args);
+    }
+
+    private static object InvokeFluentInstanceMethod(object target, string methodName, params object[] args)
+    {
+        MethodInfo method = FindCompatibleMethod(target, methodName, args);
+        if (method == null)
+        {
+            return target;
+        }
+
+        object result = method.Invoke(target, args);
+        return method.ReturnType == typeof(void) ? target : result;
+    }
+
+    private static MethodInfo FindCompatibleMethod(object target, string methodName, object[] args)
+    {
         if (target == null || string.IsNullOrEmpty(methodName))
         {
             return null;
@@ -548,10 +621,44 @@ public static class WeChatMiniGameExportTool
                 continue;
             }
 
-            return method.Invoke(target, args);
+            bool matched = true;
+            for (int j = 0; j < parameters.Length; j++)
+            {
+                object arg = args[j];
+                Type parameterType = parameters[j].ParameterType;
+                if (arg == null)
+                {
+                    if (parameterType.IsValueType && Nullable.GetUnderlyingType(parameterType) == null)
+                    {
+                        matched = false;
+                        break;
+                    }
+
+                    continue;
+                }
+
+                if (!parameterType.IsInstanceOfType(arg))
+                {
+                    matched = false;
+                    break;
+                }
+            }
+
+            if (matched)
+            {
+                return method;
+            }
         }
 
         return null;
+    }
+
+    private static void DisposeIfNeeded(object target)
+    {
+        if (target is IDisposable disposable)
+        {
+            disposable.Dispose();
+        }
     }
 
     private static Type FindTypeByName(string typeName)

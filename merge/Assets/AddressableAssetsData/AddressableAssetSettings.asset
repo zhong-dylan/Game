@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: d51c32c118a634aeb81fc95f6c27a7e7
   m_currentHash:
     serializedVersion: 2
-    Hash: a42c49c52a06f7fbdb6b3f3808e37d50
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -35,14 +35,14 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: 17803ec989d224157a00c1da7245e2e2
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: 9359eb473cf1c42e1b40e91e289f4af7
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
-  m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
+  m_overridePlayerVersion: 20260509170934
   m_GroupAssets:
   - {fileID: 11400000, guid: 593c0d426a56c47d1bb8498653718e0b, type: 2}
   - {fileID: 11400000, guid: 66b5411a5354c4f6191d6640e911af9e, type: 2}
@@ -58,7 +58,7 @@ MonoBehaviour:
       m_ProfileName: Default
       m_Values:
       - m_Id: 17803ec989d224157a00c1da7245e2e2
-        m_Value: ServerData/[BuildTarget]
+        m_Value: /Users/qilong.zhong/Desktop/workspace/Game/merge/Build/WeChatMiniGame/webgl
       - m_Id: 4cff990cc95bd455984814c1bce90a53
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: 748ad72279d5f4978b72480cabc9c7cb
@@ -66,7 +66,7 @@ MonoBehaviour:
       - m_Id: 7b91112586d24473ea7a6c03ec2534fd
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 9359eb473cf1c42e1b40e91e289f4af7
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://qzz2d.qzzres.com/merge_farm/wx/webgl
     m_ProfileEntryNames:
     - m_Id: 17803ec989d224157a00c1da7245e2e2
       m_Name: Remote.BuildPath
