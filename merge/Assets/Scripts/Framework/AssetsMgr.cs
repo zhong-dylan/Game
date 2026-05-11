@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
@@ -27,12 +28,39 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
     }
 
     private static readonly LoaderAccessToken AccessTokenInstance = new LoaderAccessToken();
+    private static string remoteResourceBaseUrl;
+    private static string versionedRemoteResourceBaseUrl;
     private readonly Dictionary<string, AssetRecord> assetRecords = new Dictionary<string, AssetRecord>();
     private readonly Dictionary<string, SceneRecord> sceneRecords = new Dictionary<string, SceneRecord>();
 
     internal static object GetLoaderAccessToken()
     {
         return AccessTokenInstance;
+    }
+
+    public static void ConfigureRemoteResourceVersion(AppStartupConfig startupConfig)
+    {
+        if (startupConfig == null)
+        {
+            remoteResourceBaseUrl = null;
+            versionedRemoteResourceBaseUrl = null;
+            Addressables.InternalIdTransformFunc = null;
+            return;
+        }
+
+        remoteResourceBaseUrl = startupConfig.GetRemoteResourceBaseUrl();
+        versionedRemoteResourceBaseUrl = startupConfig.GetVersionedRemoteResourceBaseUrl();
+
+        if (string.IsNullOrEmpty(remoteResourceBaseUrl) ||
+            string.IsNullOrEmpty(versionedRemoteResourceBaseUrl) ||
+            string.Equals(remoteResourceBaseUrl, versionedRemoteResourceBaseUrl, StringComparison.Ordinal))
+        {
+            Addressables.InternalIdTransformFunc = null;
+            return;
+        }
+
+        Addressables.InternalIdTransformFunc = TransformInternalId;
+        Log.Debug($"Addressables remote resource version enabled: {startupConfig.GetNormalizedResourceVersion()}");
     }
 
     internal void LoadAssetAsync<T>(object accessToken, string address, Action<T> onLoaded) where T : Object
@@ -270,5 +298,32 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
         }
 
         onUnloaded?.Invoke(true);
+    }
+
+    private static string TransformInternalId(IResourceLocation location)
+    {
+        Log.Debug($"AssetsMgr.TransformInternalId called. location={location?.PrimaryKey}");
+        string internalId = location == null ? null : location.InternalId;
+        if (string.IsNullOrEmpty(internalId) ||
+            string.IsNullOrEmpty(remoteResourceBaseUrl) ||
+            string.IsNullOrEmpty(versionedRemoteResourceBaseUrl))
+        {
+            return internalId;
+        }
+
+        if (internalId.StartsWith(versionedRemoteResourceBaseUrl, StringComparison.Ordinal))
+        {
+            return internalId;
+        }
+
+        if (internalId.StartsWith(remoteResourceBaseUrl, StringComparison.Ordinal))
+        {
+            string transformedInternalId = $"{versionedRemoteResourceBaseUrl}{internalId.Substring(remoteResourceBaseUrl.Length)}";
+            Log.Debug(
+                $"AssetsMgr.TransformInternalId: {location.PrimaryKey}\nfrom: {internalId}\nto: {transformedInternalId}");
+            return transformedInternalId;
+        }
+
+        return internalId;
     }
 }

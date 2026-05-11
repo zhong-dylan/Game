@@ -24,6 +24,7 @@ public static class WeChatMiniGameExportTool
     private const string OpenOfficialWindowMenuPath = "Tools/WeChat Mini Game/Open Official Convert Window";
     private const string OpenUploaderMenuPath = "Tools/WeChat Mini Game/Open Upload Panel";
     private const string OpenLocalConfigMenuPath = "Tools/WeChat Mini Game/Open Local Upload Config";
+    private const string SetTimestampVersionMenuPath = "Tools/WeChat Mini Game/Set Timestamp Resource Version";
     private const string LocalConfigPath = "UserSettings/WeChatMiniGameExportLocalConfig.json";
     private const int TosConnectionTimeoutMs = 15000;
     private const int TosRequestTimeoutMs = 120000;
@@ -67,7 +68,7 @@ public static class WeChatMiniGameExportTool
         // Upload exported webgl folder to TOS after a successful export.
         AutoUploadWebGL = true,
         // Relative object prefix inside the bucket.
-        UploadObjectPrefix = "merge_farm/wx/webgl"
+        UploadObjectPrefix = AppStartupConfig.DefaultRemoteResourcePrefix
     };
 
     [MenuItem(ExportMenuPath)]
@@ -136,6 +137,23 @@ public static class WeChatMiniGameExportTool
         EditorUtility.RevealInFinder(Path.GetFullPath(LocalConfigPath));
     }
 
+    [MenuItem(SetTimestampVersionMenuPath)]
+    private static void SetTimestampResourceVersion()
+    {
+        AppStartupConfig startupConfig = FindStartupConfig();
+        if (startupConfig == null)
+        {
+            EditorUtility.DisplayDialog("WeChat Mini Game", "AppStartupConfig was not found.", "OK");
+            return;
+        }
+
+        string timestampVersion = GenerateTimestampResourceVersion();
+        startupConfig.ResourceVersion = timestampVersion;
+        EditorUtility.SetDirty(startupConfig);
+        AssetDatabase.SaveAssets();
+        Debug.Log($"[WeChatMiniGameExportTool] ResourceVersion updated: {timestampVersion}");
+    }
+
     private static void RunExport(bool buildWebGL)
     {
         MethodInfo exportMethod = GetExportMethod();
@@ -145,6 +163,7 @@ public static class WeChatMiniGameExportTool
             return;
         }
 
+        SetTimestampResourceVersion();
         ApplyExportConfig();
         string exportDirectory = GetExportDirectory();
         if (string.IsNullOrEmpty(exportDirectory))
@@ -266,18 +285,42 @@ public static class WeChatMiniGameExportTool
 
     private static string GetConfiguredCdnBaseUrl()
     {
+        AppStartupConfig startupConfig = FindStartupConfig();
+        return startupConfig != null && !string.IsNullOrEmpty(startupConfig.CdnBaseUrl)
+            ? startupConfig.CdnBaseUrl
+            : Config.CdnBaseUrl;
+    }
+
+    private static string BuildVersionedUploadObjectPrefix()
+    {
+        AppStartupConfig startupConfig = FindStartupConfig();
+        if (startupConfig != null)
+        {
+            return startupConfig.GetVersionedObjectPrefix(Config.UploadObjectPrefix);
+        }
+
+        return NormalizePath(Config.UploadObjectPrefix).Trim('/');
+    }
+
+    private static AppStartupConfig FindStartupConfig()
+    {
         string[] guids = AssetDatabase.FindAssets("t:AppStartupConfig");
         for (int i = 0; i < guids.Length; i++)
         {
             string assetPath = AssetDatabase.GUIDToAssetPath(guids[i]);
             AppStartupConfig config = AssetDatabase.LoadAssetAtPath<AppStartupConfig>(assetPath);
-            if (config != null && !string.IsNullOrEmpty(config.CdnBaseUrl))
+            if (config != null)
             {
-                return config.CdnBaseUrl;
+                return config;
             }
         }
 
-        return Config.CdnBaseUrl;
+        return null;
+    }
+
+    private static string GenerateTimestampResourceVersion()
+    {
+        return DateTime.Now.ToString("yyyyMMddHHmmss");
     }
 
     private static Type FindType(string fullName)
@@ -350,7 +393,8 @@ public static class WeChatMiniGameExportTool
             UploadDirectoryToTos(
                 webglDirectory,
                 localConfig.TosBucket,
-                Config.UploadObjectPrefix,
+                NormalizePath(Config.UploadObjectPrefix).Trim('/'),
+                BuildVersionedUploadObjectPrefix(),
                 localConfig.TosEndpoint,
                 localConfig.TosRegion,
                 localConfig.TosAccessKey,
@@ -362,7 +406,7 @@ public static class WeChatMiniGameExportTool
         }
     }
 
-    private static void UploadDirectoryToTos(string localDirectory, string bucket, string objectPrefix, string endpoint, string region, string accessKey, string secretKey)
+    private static void UploadDirectoryToTos(string localDirectory, string bucket, string objectPrefix, string versionedObjectPrefix, string endpoint, string region, string accessKey, string secretKey)
     {
         Type builderType = FindTypeByName("TosClientBuilder");
         Type putInputType = FindTypeByName("PutObjectFromFileInput");
@@ -421,7 +465,7 @@ public static class WeChatMiniGameExportTool
             {
                 string filePath = uploadFiles[i];
                 string relativePath = NormalizePath(filePath.Substring(normalizedLocalDirectory.Length)).TrimStart('/');
-                string objectKey = NormalizePath($"{objectPrefix}/{relativePath}");
+                string objectKey = ResolveUploadObjectKey(relativePath, objectPrefix, versionedObjectPrefix);
 
                 EditorUtility.DisplayProgressBar(
                     "Upload To TOS",
@@ -464,6 +508,21 @@ public static class WeChatMiniGameExportTool
             EditorUtility.ClearProgressBar();
             DisposeIfNeeded(client);
         }
+    }
+
+    private static string ResolveUploadObjectKey(string relativePath, string objectPrefix, string versionedObjectPrefix)
+    {
+        string normalizedRelativePath = NormalizePath(relativePath).TrimStart('/');
+        string targetPrefix = IsVersionedRemoteResource(normalizedRelativePath)
+            ? versionedObjectPrefix
+            : objectPrefix;
+
+        return NormalizePath($"{targetPrefix}/{normalizedRelativePath}");
+    }
+
+    private static bool IsVersionedRemoteResource(string relativePath)
+    {
+        return NormalizePath(relativePath).StartsWith("StreamingAssets/aa/", StringComparison.OrdinalIgnoreCase);
     }
 
     private static bool ShouldUploadFile(string filePath)
