@@ -6,3 +6,8 @@ merge/Temp
 merge/TextToolDatas
 merge/Logs
 merge/LocalPackages
+*.lscache
+*.csproj
+*.csproj
+*.csproj
+merge/Server/cockroach-v25.1.10.darwin-11.0-arm64
