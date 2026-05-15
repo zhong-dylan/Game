@@ -21,7 +21,6 @@ public class AppEntry : MonoBehaviour
 
     private void Init()
     {
-        AssetsMgr.ConfigureRemoteResourceVersion(m_StartupConfig);
         _ = PlatformMgr.I; // 初始化平台管理器
         _ = AssetsMgr.I; // 初始化资源管理器
         _ = UIMgr.I; // 初始化UI管理器

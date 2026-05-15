@@ -4,7 +4,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
@@ -28,8 +27,6 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
     }
 
     private static readonly LoaderAccessToken AccessTokenInstance = new LoaderAccessToken();
-    private static string remoteResourceBaseUrl;
-    private static string versionedRemoteResourceBaseUrl;
     private readonly Dictionary<string, AssetRecord> assetRecords = new Dictionary<string, AssetRecord>();
     private readonly Dictionary<string, SceneRecord> sceneRecords = new Dictionary<string, SceneRecord>();
 
@@ -38,29 +35,42 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
         return AccessTokenInstance;
     }
 
-    public static void ConfigureRemoteResourceVersion(AppStartupConfig startupConfig)
+    internal void GetDownloadSizeAsync(object accessToken, string address, Action<long> onCompleted)
     {
-        if (startupConfig == null)
+        if (!ReferenceEquals(accessToken, AccessTokenInstance))
         {
-            remoteResourceBaseUrl = null;
-            versionedRemoteResourceBaseUrl = null;
-            Addressables.InternalIdTransformFunc = null;
+            Log.Error("AssetsMgr.GetDownloadSizeAsync denied: caller is not AssetsLoader.");
+            onCompleted?.Invoke(0L);
             return;
         }
 
-        remoteResourceBaseUrl = startupConfig.GetRemoteResourceBaseUrl();
-        versionedRemoteResourceBaseUrl = startupConfig.GetVersionedRemoteResourceBaseUrl();
-
-        if (string.IsNullOrEmpty(remoteResourceBaseUrl) ||
-            string.IsNullOrEmpty(versionedRemoteResourceBaseUrl) ||
-            string.Equals(remoteResourceBaseUrl, versionedRemoteResourceBaseUrl, StringComparison.Ordinal))
+        if (string.IsNullOrEmpty(address))
         {
-            Addressables.InternalIdTransformFunc = null;
+            Log.Error("AssetsMgr.GetDownloadSizeAsync failed: address is null or empty.");
+            onCompleted?.Invoke(0L);
             return;
         }
 
-        Addressables.InternalIdTransformFunc = TransformInternalId;
-        Log.Debug($"Addressables remote resource version enabled: {startupConfig.GetNormalizedResourceVersion()}");
+        StartCoroutine(GetDownloadSizeRoutine(address, onCompleted));
+    }
+
+    internal void DownloadDependenciesAsync(object accessToken, string address, Action<bool, long> onCompleted)
+    {
+        if (!ReferenceEquals(accessToken, AccessTokenInstance))
+        {
+            Log.Error("AssetsMgr.DownloadDependenciesAsync denied: caller is not AssetsLoader.");
+            onCompleted?.Invoke(false, 0L);
+            return;
+        }
+
+        if (string.IsNullOrEmpty(address))
+        {
+            Log.Error("AssetsMgr.DownloadDependenciesAsync failed: address is null or empty.");
+            onCompleted?.Invoke(false, 0L);
+            return;
+        }
+
+        StartCoroutine(DownloadDependenciesRoutine(address, onCompleted));
     }
 
     internal void LoadAssetAsync<T>(object accessToken, string address, Action<T> onLoaded) where T : Object
@@ -87,15 +97,7 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
             return;
         }
 
-        AsyncOperationHandle<T> typedHandle = Addressables.LoadAssetAsync<T>(address);
-        record = new AssetRecord
-        {
-            Handle = typedHandle,
-            RefCount = 1
-        };
-        assetRecords.Add(address, record);
-
-        StartCoroutine(WaitForHandle(address, record, onLoaded));
+        StartCoroutine(LoadAssetWithDependencies(address, onLoaded));
     }
 
     internal void ReleaseAsset(object accessToken, string address)
@@ -127,8 +129,7 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
 
         if (loadMode == LoadSceneMode.Single)
         {
-            AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(address, LoadSceneMode.Single);
-            StartCoroutine(WaitForSceneHandle(address, handle, onLoaded));
+            StartCoroutine(LoadSingleSceneWithDependencies(address, onLoaded));
             return;
         }
 
@@ -140,14 +141,7 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
             return;
         }
 
-        AsyncOperationHandle<SceneInstance> typedHandle = Addressables.LoadSceneAsync(address, loadMode);
-        record = new SceneRecord
-        {
-            Handle = typedHandle,
-            RefCount = 1
-        };
-        sceneRecords.Add(address, record);
-        StartCoroutine(WaitForSceneRecord(address, record, onLoaded));
+        StartCoroutine(LoadAdditiveSceneWithDependencies(address, loadMode, onLoaded));
     }
 
     internal void UnloadSceneAsync(object accessToken, string address, Action<bool> onUnloaded)
@@ -235,6 +229,229 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
         base.OnDestroy();
     }
 
+    private IEnumerator GetDownloadSizeRoutine(string address, Action<long> onCompleted)
+    {
+        AsyncOperationHandle<long> handle = Addressables.GetDownloadSizeAsync(address);
+        yield return handle;
+
+        if (handle.Status != AsyncOperationStatus.Succeeded)
+        {
+            Log.Error($"AssetsMgr failed to get download size: {address}");
+            onCompleted?.Invoke(0L);
+        }
+        else
+        {
+            onCompleted?.Invoke(handle.Result);
+        }
+
+        if (handle.IsValid())
+        {
+            Addressables.Release(handle);
+        }
+    }
+
+    private IEnumerator DownloadDependenciesRoutine(string address, Action<bool, long> onCompleted)
+    {
+        AsyncOperationHandle<long> sizeHandle = Addressables.GetDownloadSizeAsync(address);
+        yield return sizeHandle;
+
+        if (sizeHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            Log.Error($"AssetsMgr failed to get dependency download size: {address}");
+            onCompleted?.Invoke(false, 0L);
+            if (sizeHandle.IsValid())
+            {
+                Addressables.Release(sizeHandle);
+            }
+            yield break;
+        }
+
+        long downloadSize = sizeHandle.Result;
+        if (sizeHandle.IsValid())
+        {
+            Addressables.Release(sizeHandle);
+        }
+
+        if (downloadSize <= 0L)
+        {
+            onCompleted?.Invoke(true, 0L);
+            yield break;
+        }
+
+        Log.Debug($"AssetsMgr downloading dependencies: {address}, size={downloadSize} bytes");
+        AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(address, false);
+        yield return downloadHandle;
+
+        if (downloadHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            Log.Error($"AssetsMgr failed to download dependencies: {address}");
+            onCompleted?.Invoke(false, downloadSize);
+            if (downloadHandle.IsValid())
+            {
+                Addressables.Release(downloadHandle);
+            }
+            yield break;
+        }
+
+        if (downloadHandle.IsValid())
+        {
+            Addressables.Release(downloadHandle);
+        }
+
+        onCompleted?.Invoke(true, downloadSize);
+    }
+
+    private IEnumerator LoadAssetWithDependencies<T>(string address, Action<T> onLoaded) where T : Object
+    {
+        AsyncOperationHandle<long> sizeHandle = Addressables.GetDownloadSizeAsync(address);
+        yield return sizeHandle;
+
+        if (sizeHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            Log.Error($"AssetsMgr failed to get download size before loading asset: {address}");
+            onLoaded?.Invoke(null);
+            if (sizeHandle.IsValid())
+            {
+                Addressables.Release(sizeHandle);
+            }
+            yield break;
+        }
+
+        long downloadSize = sizeHandle.Result;
+        if (sizeHandle.IsValid())
+        {
+            Addressables.Release(sizeHandle);
+        }
+
+        if (downloadSize > 0L)
+        {
+            AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(address, false);
+            yield return downloadHandle;
+            if (downloadHandle.Status != AsyncOperationStatus.Succeeded)
+            {
+                Log.Error($"AssetsMgr failed to download dependencies before loading asset: {address}");
+                onLoaded?.Invoke(null);
+                if (downloadHandle.IsValid())
+                {
+                    Addressables.Release(downloadHandle);
+                }
+                yield break;
+            }
+
+            if (downloadHandle.IsValid())
+            {
+                Addressables.Release(downloadHandle);
+            }
+        }
+
+        AssetRecord record = new AssetRecord
+        {
+            Handle = Addressables.LoadAssetAsync<T>(address),
+            RefCount = 1
+        };
+        assetRecords[address] = record;
+        StartCoroutine(WaitForHandle(address, record, onLoaded));
+    }
+
+    private IEnumerator LoadSingleSceneWithDependencies(string address, Action<bool> onLoaded)
+    {
+        AsyncOperationHandle<long> sizeHandle = Addressables.GetDownloadSizeAsync(address);
+        yield return sizeHandle;
+
+        if (sizeHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            Log.Error($"AssetsMgr failed to get download size before loading scene: {address}");
+            onLoaded?.Invoke(false);
+            if (sizeHandle.IsValid())
+            {
+                Addressables.Release(sizeHandle);
+            }
+            yield break;
+        }
+
+        long downloadSize = sizeHandle.Result;
+        if (sizeHandle.IsValid())
+        {
+            Addressables.Release(sizeHandle);
+        }
+
+        if (downloadSize > 0L)
+        {
+            AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(address, false);
+            yield return downloadHandle;
+            if (downloadHandle.Status != AsyncOperationStatus.Succeeded)
+            {
+                Log.Error($"AssetsMgr failed to download dependencies before loading scene: {address}");
+                onLoaded?.Invoke(false);
+                if (downloadHandle.IsValid())
+                {
+                    Addressables.Release(downloadHandle);
+                }
+                yield break;
+            }
+
+            if (downloadHandle.IsValid())
+            {
+                Addressables.Release(downloadHandle);
+            }
+        }
+
+        AsyncOperationHandle<SceneInstance> handle = Addressables.LoadSceneAsync(address, LoadSceneMode.Single);
+        StartCoroutine(WaitForSceneHandle(address, handle, onLoaded));
+    }
+
+    private IEnumerator LoadAdditiveSceneWithDependencies(string address, LoadSceneMode loadMode, Action<bool> onLoaded)
+    {
+        AsyncOperationHandle<long> sizeHandle = Addressables.GetDownloadSizeAsync(address);
+        yield return sizeHandle;
+
+        if (sizeHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            Log.Error($"AssetsMgr failed to get download size before loading scene: {address}");
+            onLoaded?.Invoke(false);
+            if (sizeHandle.IsValid())
+            {
+                Addressables.Release(sizeHandle);
+            }
+            yield break;
+        }
+
+        long downloadSize = sizeHandle.Result;
+        if (sizeHandle.IsValid())
+        {
+            Addressables.Release(sizeHandle);
+        }
+
+        if (downloadSize > 0L)
+        {
+            AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(address, false);
+            yield return downloadHandle;
+            if (downloadHandle.Status != AsyncOperationStatus.Succeeded)
+            {
+                Log.Error($"AssetsMgr failed to download dependencies before loading scene: {address}");
+                onLoaded?.Invoke(false);
+                if (downloadHandle.IsValid())
+                {
+                    Addressables.Release(downloadHandle);
+                }
+                yield break;
+            }
+
+            if (downloadHandle.IsValid())
+            {
+                Addressables.Release(downloadHandle);
+            }
+        }
+
+        SceneRecord record = new SceneRecord
+        {
+            Handle = Addressables.LoadSceneAsync(address, loadMode),
+            RefCount = 1
+        };
+        sceneRecords[address] = record;
+        StartCoroutine(WaitForSceneRecord(address, record, onLoaded));
+    }
+
     private IEnumerator WaitForHandle<T>(string address, AssetRecord record, Action<T> onLoaded) where T : Object
     {
         yield return record.Handle;
@@ -298,32 +515,5 @@ public class AssetsMgr : MonoSingle<AssetsMgr>
         }
 
         onUnloaded?.Invoke(true);
-    }
-
-    private static string TransformInternalId(IResourceLocation location)
-    {
-        Log.Debug($"AssetsMgr.TransformInternalId called. location={location?.PrimaryKey}");
-        string internalId = location == null ? null : location.InternalId;
-        if (string.IsNullOrEmpty(internalId) ||
-            string.IsNullOrEmpty(remoteResourceBaseUrl) ||
-            string.IsNullOrEmpty(versionedRemoteResourceBaseUrl))
-        {
-            return internalId;
-        }
-
-        if (internalId.StartsWith(versionedRemoteResourceBaseUrl, StringComparison.Ordinal))
-        {
-            return internalId;
-        }
-
-        if (internalId.StartsWith(remoteResourceBaseUrl, StringComparison.Ordinal))
-        {
-            string transformedInternalId = $"{versionedRemoteResourceBaseUrl}{internalId.Substring(remoteResourceBaseUrl.Length)}";
-            Log.Debug(
-                $"AssetsMgr.TransformInternalId: {location.PrimaryKey}\nfrom: {internalId}\nto: {transformedInternalId}");
-            return transformedInternalId;
-        }
-
-        return internalId;
     }
 }

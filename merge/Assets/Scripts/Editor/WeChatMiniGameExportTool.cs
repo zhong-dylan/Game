@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Threading;
+using UnityEditor.AddressableAssets;
+using UnityEditor.AddressableAssets.Build;
+using UnityEditor.AddressableAssets.Settings;
 using UnityEditor;
 using UnityEngine;
 
@@ -26,11 +29,15 @@ public static class WeChatMiniGameExportTool
     private const string OpenLocalConfigMenuPath = "Tools/WeChat Mini Game/Open Local Upload Config";
     private const string SetTimestampVersionMenuPath = "Tools/WeChat Mini Game/Set Timestamp Resource Version";
     private const string LocalConfigPath = "UserSettings/WeChatMiniGameExportLocalConfig.json";
+    private const string AddressablesRemoteOutputDirectory = "Build/AddressablesRemote/webgl";
     private const int TosConnectionTimeoutMs = 15000;
-    private const int TosRequestTimeoutMs = 120000;
-    private const int TosSocketTimeoutMs = 120000;
+    private const int TosRequestTimeoutMs = 600000;
+    private const int TosSocketTimeoutMs = 600000;
     private const int TosMaxConnections = 8;
     private const int TosUploadIntervalMs = 300;
+    private const int TosUploadRetryCount = 3;
+    private const int TosUploadRetryDelayMs = 2000;
+    private static AddressablesPlayerBuildResult s_LastAddressablesBuildResult;
     private static readonly ExportConfig Config = new ExportConfig
     {
         // Root export directory consumed by the WeChat SDK converter.
@@ -150,6 +157,7 @@ public static class WeChatMiniGameExportTool
         string timestampVersion = GenerateTimestampResourceVersion();
         startupConfig.ResourceVersion = timestampVersion;
         EditorUtility.SetDirty(startupConfig);
+        SyncAddressablesVersionSettings(timestampVersion);
         AssetDatabase.SaveAssets();
         Debug.Log($"[WeChatMiniGameExportTool] ResourceVersion updated: {timestampVersion}");
     }
@@ -164,6 +172,15 @@ public static class WeChatMiniGameExportTool
         }
 
         SetTimestampResourceVersion();
+        if (!BuildAddressablesContent())
+        {
+            EditorUtility.DisplayDialog(
+                "WeChat Mini Game",
+                "Addressables build failed. Check Unity Console for details.",
+                "OK");
+            return;
+        }
+
         ApplyExportConfig();
         string exportDirectory = GetExportDirectory();
         if (string.IsNullOrEmpty(exportDirectory))
@@ -199,6 +216,33 @@ public static class WeChatMiniGameExportTool
             Debug.LogError(errorDetail);
             EditorUtility.DisplayDialog("WeChat Mini Game", errorDetail, "OK");
         }
+    }
+
+    private static bool BuildAddressablesContent()
+    {
+        AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.Settings;
+        if (settings == null)
+        {
+            Debug.LogError("[WeChatMiniGameExportTool] Addressables build failed: settings not found.");
+            return false;
+        }
+
+        Debug.Log(
+            $"[WeChatMiniGameExportTool] Building Addressables content. PlayerVersion={settings.PlayerBuildVersion}, RemoteBuildPath={GetActiveProfileValue(settings, AddressableAssetSettings.kRemoteBuildPath)}");
+
+        AddressableAssetSettings.BuildPlayerContent(out AddressablesPlayerBuildResult result);
+        if (!string.IsNullOrEmpty(result.Error))
+        {
+            Debug.LogError($"[WeChatMiniGameExportTool] Addressables build failed: {result.Error}");
+            s_LastAddressablesBuildResult = null;
+            return false;
+        }
+
+        s_LastAddressablesBuildResult = result;
+        Debug.Log($"[WeChatMiniGameExportTool] Addressables build succeeded. OutputPath={result.OutputPath}");
+        LogAddressablesArtifacts(result.OutputPath);
+        LogAddressablesBuildResult(result);
+        return true;
     }
 
     private static MethodInfo GetExportMethod()
@@ -283,6 +327,63 @@ public static class WeChatMiniGameExportTool
         return string.IsNullOrEmpty(objectPrefix) ? baseUrl : $"{baseUrl}/{objectPrefix}";
     }
 
+    private static string GetActiveProfileValue(AddressableAssetSettings settings, string variableName)
+    {
+        if (settings == null || string.IsNullOrEmpty(settings.activeProfileId))
+        {
+            return string.Empty;
+        }
+
+        return settings.profileSettings.GetValueByName(settings.activeProfileId, variableName);
+    }
+
+    private static void SyncAddressablesVersionSettings(string timestampVersion)
+    {
+        AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.Settings;
+        if (settings == null)
+        {
+            return;
+        }
+
+        string profileId = settings.activeProfileId;
+        if (string.IsNullOrEmpty(profileId))
+        {
+            return;
+        }
+
+        string remoteLoadPath = BuildCdnUrl();
+        string remoteBuildPath = Path.GetFullPath(AddressablesRemoteOutputDirectory);
+        string currentValue = settings.profileSettings.GetValueByName(profileId, AddressableAssetSettings.kRemoteLoadPath);
+        string currentBuildPath = settings.profileSettings.GetValueByName(profileId, AddressableAssetSettings.kRemoteBuildPath);
+        bool changed = false;
+
+        if (!string.Equals(settings.OverridePlayerVersion, timestampVersion, StringComparison.Ordinal))
+        {
+            settings.OverridePlayerVersion = timestampVersion;
+            changed = true;
+            Debug.Log($"[WeChatMiniGameExportTool] Addressables OverridePlayerVersion updated: {timestampVersion}");
+        }
+
+        if (!string.Equals(currentValue, remoteLoadPath, StringComparison.Ordinal))
+        {
+            settings.profileSettings.SetValue(profileId, AddressableAssetSettings.kRemoteLoadPath, remoteLoadPath);
+            changed = true;
+            Debug.Log($"[WeChatMiniGameExportTool] Addressables Remote.LoadPath updated: {remoteLoadPath}");
+        }
+
+        if (!string.Equals(currentBuildPath, remoteBuildPath, StringComparison.Ordinal))
+        {
+            settings.profileSettings.SetValue(profileId, AddressableAssetSettings.kRemoteBuildPath, remoteBuildPath);
+            changed = true;
+            Debug.Log($"[WeChatMiniGameExportTool] Addressables Remote.BuildPath updated: {remoteBuildPath}");
+        }
+
+        if (changed)
+        {
+            EditorUtility.SetDirty(settings);
+        }
+    }
+
     private static string GetConfiguredCdnBaseUrl()
     {
         AppStartupConfig startupConfig = FindStartupConfig();
@@ -293,12 +394,6 @@ public static class WeChatMiniGameExportTool
 
     private static string BuildVersionedUploadObjectPrefix()
     {
-        AppStartupConfig startupConfig = FindStartupConfig();
-        if (startupConfig != null)
-        {
-            return startupConfig.GetVersionedObjectPrefix(Config.UploadObjectPrefix);
-        }
-
         return NormalizePath(Config.UploadObjectPrefix).Trim('/');
     }
 
@@ -390,6 +485,8 @@ public static class WeChatMiniGameExportTool
 
         try
         {
+            UploadAddressablesArtifactsIfNeeded(localConfig);
+            LogAddressablesArtifacts(webglDirectory);
             UploadDirectoryToTos(
                 webglDirectory,
                 localConfig.TosBucket,
@@ -406,7 +503,158 @@ public static class WeChatMiniGameExportTool
         }
     }
 
+    private static void UploadAddressablesArtifactsIfNeeded(LocalUploadConfig localConfig)
+    {
+        AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.Settings;
+        string remoteBuildRoot = GetActiveProfileValue(settings, AddressableAssetSettings.kRemoteBuildPath);
+        if (string.IsNullOrEmpty(remoteBuildRoot) || !Directory.Exists(remoteBuildRoot))
+        {
+            Debug.LogWarning($"[WeChatMiniGameExportTool] Addressables upload skipped: remote build path not found: {remoteBuildRoot}");
+            return;
+        }
+
+        string[] files = Directory.GetFiles(remoteBuildRoot, "*", SearchOption.AllDirectories);
+        List<string> filesToUpload = new List<string>();
+        for (int i = 0; i < files.Length; i++)
+        {
+            if (!ShouldUploadFile(files[i]))
+            {
+                continue;
+            }
+
+            filesToUpload.Add(NormalizePath(files[i]));
+        }
+
+        if (filesToUpload.Count == 0)
+        {
+            Debug.LogWarning("[WeChatMiniGameExportTool] Addressables upload skipped: no remote catalog or bundle files were found.");
+            return;
+        }
+
+        Debug.Log($"[WeChatMiniGameExportTool] Addressables upload root: {remoteBuildRoot}");
+        LogAddressablesArtifacts(remoteBuildRoot);
+
+        UploadFileListToTos(
+            filesToUpload,
+            remoteBuildRoot,
+            localConfig.TosBucket,
+            BuildVersionedUploadObjectPrefix(),
+            localConfig.TosEndpoint,
+            localConfig.TosRegion,
+            localConfig.TosAccessKey,
+            localConfig.TosSecretKey,
+            "Upload Addressables");
+    }
+
+    private static void LogAddressablesArtifacts(string webglDirectory)
+    {
+        if (string.IsNullOrEmpty(webglDirectory) || !Directory.Exists(webglDirectory))
+        {
+            return;
+        }
+
+        string[] artifactFiles = Directory.GetFiles(webglDirectory, "*", SearchOption.AllDirectories);
+        List<string> matchedFiles = new List<string>();
+        string normalizedRoot = NormalizePath(webglDirectory).TrimEnd('/');
+
+        for (int i = 0; i < artifactFiles.Length; i++)
+        {
+            string normalizedPath = NormalizePath(artifactFiles[i]);
+            string fileName = Path.GetFileName(normalizedPath);
+            if (fileName.StartsWith("catalog", StringComparison.OrdinalIgnoreCase) ||
+                fileName.EndsWith(".hash", StringComparison.OrdinalIgnoreCase))
+            {
+                matchedFiles.Add(normalizedPath.Substring(normalizedRoot.Length).TrimStart('/'));
+            }
+        }
+
+        if (matchedFiles.Count == 0)
+        {
+            Debug.Log("[WeChatMiniGameExportTool] No local Addressables catalog/hash files were found under webgl output.");
+            return;
+        }
+
+        matchedFiles.Sort(StringComparer.OrdinalIgnoreCase);
+        Debug.Log(
+            $"[WeChatMiniGameExportTool] Local Addressables catalog/hash files:\n- {string.Join("\n- ", matchedFiles)}");
+    }
+
+    private static void LogAddressablesBuildResult(AddressablesPlayerBuildResult result)
+    {
+        if (result == null)
+        {
+            return;
+        }
+
+        List<string> details = new List<string>();
+        if (!string.IsNullOrEmpty(result.RemoteCatalogHashFilePath))
+        {
+            details.Add($"hash: {NormalizePath(result.RemoteCatalogHashFilePath)}");
+        }
+
+        if (!string.IsNullOrEmpty(result.RemoteCatalogJsonFilePath))
+        {
+            details.Add($"json: {NormalizePath(result.RemoteCatalogJsonFilePath)}");
+        }
+
+        if (result.AssetBundleBuildResults != null)
+        {
+            for (int i = 0; i < result.AssetBundleBuildResults.Count; i++)
+            {
+                string bundlePath = result.AssetBundleBuildResults[i].FilePath;
+                if (!string.IsNullOrEmpty(bundlePath))
+                {
+                    details.Add($"bundle: {NormalizePath(bundlePath)}");
+                }
+            }
+        }
+
+        if (details.Count > 0)
+        {
+            Debug.Log($"[WeChatMiniGameExportTool] Addressables build artifacts:\n- {string.Join("\n- ", details)}");
+        }
+    }
+
     private static void UploadDirectoryToTos(string localDirectory, string bucket, string objectPrefix, string versionedObjectPrefix, string endpoint, string region, string accessKey, string secretKey)
+    {
+        string[] files = Directory.GetFiles(localDirectory, "*", SearchOption.AllDirectories);
+        List<string> uploadFiles = new List<string>();
+        for (int i = 0; i < files.Length; i++)
+        {
+            if (!ShouldUploadFile(files[i]))
+            {
+                continue;
+            }
+
+            uploadFiles.Add(NormalizePath(files[i]));
+        }
+
+        UploadFileListToTos(
+            uploadFiles,
+            localDirectory,
+            bucket,
+            versionedObjectPrefix,
+            endpoint,
+            region,
+            accessKey,
+            secretKey,
+            "Upload To TOS",
+            objectPrefix,
+            versionedObjectPrefix);
+    }
+
+    private static void UploadFileListToTos(
+        List<string> uploadFiles,
+        string localRootDirectory,
+        string bucket,
+        string uploadPrefix,
+        string endpoint,
+        string region,
+        string accessKey,
+        string secretKey,
+        string progressTitle,
+        string objectPrefix = null,
+        string versionedObjectPrefix = null)
     {
         Type builderType = FindTypeByName("TosClientBuilder");
         Type putInputType = FindTypeByName("PutObjectFromFileInput");
@@ -438,18 +686,6 @@ public static class WeChatMiniGameExportTool
             return;
         }
 
-        string[] files = Directory.GetFiles(localDirectory, "*", SearchOption.AllDirectories);
-        List<string> uploadFiles = new List<string>();
-        for (int i = 0; i < files.Length; i++)
-        {
-            if (!ShouldUploadFile(files[i]))
-            {
-                continue;
-            }
-
-            uploadFiles.Add(NormalizePath(files[i]));
-        }
-
         if (uploadFiles.Count == 0)
         {
             DisposeIfNeeded(client);
@@ -457,7 +693,9 @@ public static class WeChatMiniGameExportTool
             return;
         }
 
-        string normalizedLocalDirectory = NormalizePath(localDirectory).TrimEnd('/');
+        string normalizedLocalDirectory = NormalizePath(localRootDirectory).TrimEnd('/');
+        string resolvedObjectPrefix = string.IsNullOrEmpty(objectPrefix) ? uploadPrefix : objectPrefix;
+        string resolvedVersionedObjectPrefix = string.IsNullOrEmpty(versionedObjectPrefix) ? uploadPrefix : versionedObjectPrefix;
 
         try
         {
@@ -465,10 +703,14 @@ public static class WeChatMiniGameExportTool
             {
                 string filePath = uploadFiles[i];
                 string relativePath = NormalizePath(filePath.Substring(normalizedLocalDirectory.Length)).TrimStart('/');
-                string objectKey = ResolveUploadObjectKey(relativePath, objectPrefix, versionedObjectPrefix);
+                string objectKey = ResolveUploadObjectKey(relativePath, resolvedObjectPrefix, resolvedVersionedObjectPrefix);
+                if (IsAddressablesCatalogArtifact(relativePath))
+                {
+                    Debug.Log($"[WeChatMiniGameExportTool] Queue catalog upload: {relativePath} -> {objectKey}");
+                }
 
                 EditorUtility.DisplayProgressBar(
-                    "Upload To TOS",
+                    progressTitle,
                     $"Uploading {i + 1}/{uploadFiles.Count}\n{relativePath}",
                     (float)(i + 1) / uploadFiles.Count);
 
@@ -478,7 +720,7 @@ public static class WeChatMiniGameExportTool
                 SetMemberValue(putInput, "FilePath", filePath);
                 try
                 {
-                    InvokeInstanceMethod(client, "PutObjectFromFile", putInput);
+                    UploadFileWithRetry(client, putInput, filePath, objectKey, i + 1, uploadFiles.Count);
                 }
                 catch (Exception e)
                 {
@@ -500,7 +742,7 @@ public static class WeChatMiniGameExportTool
         catch (Exception e)
         {
             throw new InvalidOperationException(
-                $"TOS upload failed while uploading directory '{localDirectory}'. See inner exception for the failing request.",
+                $"TOS upload failed while uploading directory '{localRootDirectory}'. See inner exception for the failing request.",
                 e);
         }
         finally
@@ -525,11 +767,62 @@ public static class WeChatMiniGameExportTool
         return NormalizePath(relativePath).StartsWith("StreamingAssets/aa/", StringComparison.OrdinalIgnoreCase);
     }
 
+    private static bool IsAddressablesCatalogArtifact(string relativePath)
+    {
+        string fileName = Path.GetFileName(NormalizePath(relativePath));
+        return fileName.StartsWith("catalog", StringComparison.OrdinalIgnoreCase) ||
+               fileName.EndsWith(".hash", StringComparison.OrdinalIgnoreCase);
+    }
+
     private static bool ShouldUploadFile(string filePath)
     {
         string extension = Path.GetExtension(filePath);
         return !string.Equals(extension, ".manifest", StringComparison.OrdinalIgnoreCase) &&
                !string.Equals(extension, ".meta", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static void UploadFileWithRetry(object client, object putInput, string filePath, string objectKey, int index, int totalCount)
+    {
+        Exception lastException = null;
+        for (int attempt = 1; attempt <= TosUploadRetryCount; attempt++)
+        {
+            try
+            {
+                if (attempt > 1)
+                {
+                    Debug.Log($"[WeChatMiniGameExportTool] Retry upload ({attempt}/{TosUploadRetryCount}): {objectKey}");
+                }
+
+                InvokeInstanceMethod(client, "PutObjectFromFile", putInput);
+                return;
+            }
+            catch (Exception e)
+            {
+                lastException = e;
+                bool isLastAttempt = attempt >= TosUploadRetryCount;
+                Debug.LogWarning(
+                    $"[WeChatMiniGameExportTool] Upload attempt failed ({attempt}/{TosUploadRetryCount}) for {objectKey} ({index}/{totalCount}): {GetInnermostExceptionMessage(e)}");
+                if (isLastAttempt)
+                {
+                    break;
+                }
+
+                Thread.Sleep(TosUploadRetryDelayMs * attempt);
+            }
+        }
+
+        throw lastException ?? new InvalidOperationException($"Upload failed for {filePath} -> {objectKey}");
+    }
+
+    private static string GetInnermostExceptionMessage(Exception exception)
+    {
+        Exception current = exception;
+        while (current != null && current.InnerException != null)
+        {
+            current = current.InnerException;
+        }
+
+        return current == null ? "unknown error" : current.Message;
     }
 
     private static string NormalizePath(string path)

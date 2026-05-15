@@ -24,6 +24,16 @@ public class AssetsLoader : MonoBehaviour
         });
     }
 
+    public void GetDownloadSizeAsync(string address, Action<long> onCompleted)
+    {
+        AssetsMgr.I.GetDownloadSizeAsync(AssetsMgrAccessToken, address, onCompleted);
+    }
+
+    public void DownloadDependenciesAsync(string address, Action<bool, long> onCompleted)
+    {
+        AssetsMgr.I.DownloadDependenciesAsync(AssetsMgrAccessToken, address, onCompleted);
+    }
+
     public void CreateGameObjectAsync(string address, Action<GameObject> onCreated, Transform parent = null, bool worldPositionStays = false)
     {
         AssetsMgr.I.LoadAssetAsync<GameObject>(AssetsMgrAccessToken, address, prefab =>

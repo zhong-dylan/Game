@@ -16,22 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d51c32c118a634aeb81fc95f6c27a7e7
-  m_SerializeEntries:
-  - m_GUID: 1f6e6d120fb464768a385b9c0dac1762
-    m_Address: Fonts/fzcy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4bd670bd328aa439dbeadb5f262d9ca1
-    m_Address: Prefabs/UILogin
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e579edd801bd143b9bec818dfc4caa9c
-    m_Address: Bg/login
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b3eb7ace61f804b72af0131c8c3f7780, type: 2}
   m_SchemaSet:

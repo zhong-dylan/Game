@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Remote Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Remote Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c49d69246c4944ce2805f987cf0af650
+  m_SerializeEntries:
+  - m_GUID: 0c6daba98f2c6464ca984b717ed51ad6
+    m_Address: Bg/login 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f6e6d120fb464768a385b9c0dac1762
+    m_Address: Fonts/fzcy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bd670bd328aa439dbeadb5f262d9ca1
+    m_Address: Prefabs/UILogin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e579edd801bd143b9bec818dfc4caa9c
+    m_Address: Bg/login
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b3eb7ace61f804b72af0131c8c3f7780, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 82a7b582fcc2341c2adf83debda54005, type: 2}
+    - {fileID: 11400000, guid: a2b42916e887c46f8be1a6c1404acdf6, type: 2}
