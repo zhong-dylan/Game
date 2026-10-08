@@ -1,0 +1,70 @@
+name: server
+x-storage-env: &storage-env
+  MYSQL_DSN: "game:${MYSQL_PASSWORD:?Run scripts/init-environment.sh first}@tcp(mysql:3306)/game?parseTime=true&timeout=5s&readTimeout=5s&writeTimeout=5s"
+  REDIS_URL: "redis://:${REDIS_PASSWORD:?Run scripts/init-environment.sh first}@redis:6379/0"
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Run scripts/init-environment.sh first}
+      MYSQL_DATABASE: game
+      MYSQL_USER: game
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Run scripts/init-environment.sh first}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_PASSWORD mysql -h 127.0.0.1 -u game -D game -e 'SELECT 1'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  redis:
+    image: redis:7.4-alpine
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Run scripts/init-environment.sh first}
+    command: ["sh", "-c", 'exec redis-server --appendonly yes --requirepass "$$REDIS_PASSWORD"']
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", 'REDISCLI_AUTH="$$REDIS_PASSWORD" redis-cli ping | grep -q PONG']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+  db-init:
+    build: .
+    command: ["/app/dbinit"]
+    environment:
+      <<: *storage-env
+      ADMIN_USERNAME: ${ADMIN_USERNAME:?Run scripts/init-environment.sh first}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Run scripts/init-environment.sh first}
+    depends_on:
+      mysql: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    restart: "no"
+  gateway:
+    build: .
+    environment:
+      <<: *storage-env
+      GATEWAY_ADDR: ":8080"
+      ADMIN_COOKIE_SECURE: ${ADMIN_COOKIE_SECURE:-false}
+    ports:
+      - "${GATEWAY_BIND:-127.0.0.1}:${GATEWAY_PORT:-8080}:8080"
+    depends_on:
+      db-init: {condition: service_completed_successfully}
+    restart: unless-stopped
+  gameserver:
+    profiles: [game]
+    build: .
+    command: ["/app/gameserver"]
+    environment:
+      <<: *storage-env
+      GAME_VERSION: ${GAME_VERSION:-1.0}
+      GAME_ADDR: ":8081"
+    depends_on:
+      mysql: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+volumes:
+  mysql-data:
+  redis-data:
